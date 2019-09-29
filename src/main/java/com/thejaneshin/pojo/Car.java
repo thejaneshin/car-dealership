@@ -5,6 +5,10 @@ import java.io.Serializable;
 public class Car implements Serializable {
 	private static final long serialVersionUID = 8869032628199263063L;
 
+	public enum StatusType {
+		IN_LOT, SOLD, REMOVED; 
+	}
+	
 	private String vin;
 	
 	private String make;
@@ -15,17 +19,20 @@ public class Car implements Serializable {
 	
 	private String color;
 	
+	private StatusType status;
+	
 	public Car() {
 		super();
 	}
 
-	public Car(String vin, String make, String model, int year, String color) {
+	public Car(String vin, String make, String model, int year, String color, StatusType status) {
 		super();
 		this.vin = vin;
 		this.make = make;
 		this.model = model;
 		this.year = year;
 		this.color = color;
+		this.status = status;
 	}
 
 	public String getVin() {
@@ -68,6 +75,14 @@ public class Car implements Serializable {
 		this.color = color;
 	}
 
+	public StatusType getStatus() {
+		return status;
+	}
+
+	public void setStatus(StatusType status) {
+		this.status = status;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -75,6 +90,7 @@ public class Car implements Serializable {
 		result = prime * result + ((color == null) ? 0 : color.hashCode());
 		result = prime * result + ((make == null) ? 0 : make.hashCode());
 		result = prime * result + ((model == null) ? 0 : model.hashCode());
+		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result + ((vin == null) ? 0 : vin.hashCode());
 		result = prime * result + year;
 		return result;
@@ -104,6 +120,8 @@ public class Car implements Serializable {
 				return false;
 		} else if (!model.equals(other.model))
 			return false;
+		if (status != other.status)
+			return false;
 		if (vin == null) {
 			if (other.vin != null)
 				return false;
@@ -112,6 +130,6 @@ public class Car implements Serializable {
 		if (year != other.year)
 			return false;
 		return true;
-	}	
+	}
 	
 }

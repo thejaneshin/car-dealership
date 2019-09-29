@@ -1,16 +1,15 @@
 package com.thejaneshin.pojo;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class Customer extends User implements Serializable {
 	private static final long serialVersionUID = 8550257168760673340L;
 
-	// Doing List instead of Set because it looks better sorted
-	private List<Offer> offers;
+	private Set<Offer> offers;
 	
-	private List<Car> ownedCars;
+	private Set<Car> ownedCars;
 	
 	// Might need to change this to include monthly
 	private Map<Car, Payment> remainingPayments;
@@ -19,19 +18,23 @@ public class Customer extends User implements Serializable {
 		super();
 	}
 	
-	public List<Offer> getOffers() {
+	public Customer(String username, String password, String firstName, String lastName) {
+		super(username, password, firstName, lastName);
+	}
+	
+	public Set<Offer> getOffers() {
 		return offers;
 	}
 
-	public void setOffers(List<Offer> offers) {
+	public void setOffers(Set<Offer> offers) {
 		this.offers = offers;
 	}
 
-	public List<Car> getOwnedCars() {
+	public Set<Car> getOwnedCars() {
 		return ownedCars;
 	}
 
-	public void setOwnedCars(List<Car> ownedCars) {
+	public void setOwnedCars(Set<Car> ownedCars) {
 		this.ownedCars = ownedCars;
 	}
 

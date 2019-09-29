@@ -1,15 +1,15 @@
 package com.thejaneshin.dao;
 
-import java.util.List;
+import java.util.Set;
 
 import com.thejaneshin.pojo.Customer;
 
 public interface CustomerDAO {
 	public void createCustomer(Customer customer);
 	
-	public Customer getCustomer(String username);
+	public Customer readCustomer(String username);
 	
-	public List<Customer> getAllCustomers();
+	public Set<Customer> readAllCustomers();
 	
 	// Only include this if I have time to implement
 	// change username/password/name options
