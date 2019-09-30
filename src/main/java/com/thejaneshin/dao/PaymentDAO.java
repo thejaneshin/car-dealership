@@ -1,12 +1,14 @@
 package com.thejaneshin.dao;
 
+import java.util.Set;
+
 import com.thejaneshin.pojo.Payment;
 
 public interface PaymentDAO {
 	public void createPayment(Payment p);
 	
-	public Payment getPayment(/*What to put in here...*/);
+	public Payment readPaymentByUsernameAndVin(String username, String vin);
 	
-	public Payment getAllPayments();
+	public Set<Payment> readAllPayments();
 	
 }

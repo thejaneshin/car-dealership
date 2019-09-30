@@ -13,15 +13,15 @@ public class Offer implements Serializable {
 	
 	private StatusType status;
 	
-	private Customer offerer;
+	private String offerer;
 	
-	private Car offeredCar;
+	private String offeredCar;
 	
 	public Offer() {
 		super();
 	}
 
-	public Offer(double value, StatusType status, Customer offerer, Car offeredCar) {
+	public Offer(double value, StatusType status, String offerer, String offeredCar) {
 		super();
 		this.value = value;
 		this.status = status;
@@ -45,19 +45,19 @@ public class Offer implements Serializable {
 		this.status = status;
 	}
 
-	public Customer getOfferer() {
+	public String getOfferer() {
 		return offerer;
 	}
 
-	public void setOfferer(Customer offerer) {
+	public void setOfferer(String offerer) {
 		this.offerer = offerer;
 	}
 
-	public Car getOfferedCar() {
+	public String getOfferedCar() {
 		return offeredCar;
 	}
 
-	public void setOfferedCar(Car offeredCar) {
+	public void setOfferedCar(String offeredCar) {
 		this.offeredCar = offeredCar;
 	}
 

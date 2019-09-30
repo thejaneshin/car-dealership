@@ -10,7 +10,6 @@ import java.io.ObjectOutputStream;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.thejaneshin.pojo.Customer;
 import com.thejaneshin.pojo.Employee;
 import com.thejaneshin.pojo.User;
 

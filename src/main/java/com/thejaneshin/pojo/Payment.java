@@ -7,15 +7,17 @@ public class Payment implements Serializable {
 
 	private double amount;
 	
-	private Car paidCar;
+	private String paidCar;
 	
-	private Customer payer;
+	private String payer;
+	
+	// Might need to add LocalDate
 	
 	public Payment() {
 		super();
 	}
 
-	public Payment(double amount, Car paidCar, Customer payer) {
+	public Payment(double amount, String payer, String paidCar) {
 		super();
 		this.amount = amount;
 		this.paidCar = paidCar;
@@ -30,19 +32,19 @@ public class Payment implements Serializable {
 		this.amount = amount;
 	}
 
-	public Car getPaidCar() {
+	public String getPaidCar() {
 		return paidCar;
 	}
 
-	public void setPaidCar(Car paidCar) {
+	public void setPaidCar(String paidCar) {
 		this.paidCar = paidCar;
 	}
 
-	public Customer getPayer() {
+	public String getPayer() {
 		return payer;
 	}
 
-	public void setPayer(Customer payer) {
+	public void setPayer(String payer) {
 		this.payer = payer;
 	}
 
