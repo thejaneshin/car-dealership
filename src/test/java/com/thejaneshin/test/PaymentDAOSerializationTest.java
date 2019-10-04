@@ -37,10 +37,10 @@ public class PaymentDAOSerializationTest {
 
 	@Test
 	public void testCreateAndReadPayment() {
-		Payment testPayment = new Payment(3000.00, "harry", "WBAPK5C53BF123740");
+		Payment testPayment = new Payment(3000.00, "harry", "2HKRM4H31EH662200");
 		paymentDAOSer.createPayment(testPayment);
 
-		assertEquals(testPayment, paymentDAOSer.readPaymentByUsernameAndVin("harry", "WBAPK5C53BF123740"));
+		assertEquals(testPayment, paymentDAOSer.readPaymentsByUsernameAndVin("harry", "WBAPK5C53BF123740"));
 	}
 	
 	@Test

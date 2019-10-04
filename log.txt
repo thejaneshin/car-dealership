@@ -1,0 +1,210 @@
+2019-10-03 23:53:48 INFO  root:25 - ./serializedfiles/users/jane.dat is not in serializedfiles
+2019-10-04 06:54:42 INFO  root:25 - Car application started
+2019-10-04 06:54:42 INFO  root:25 - Login and Register screen
+2019-10-04 06:54:45 INFO  root:25 - Register screen
+2019-10-04 07:23:13 INFO  root:25 - Car application started
+2019-10-04 07:23:13 INFO  root:25 - Login and Register screen
+2019-10-04 07:23:28 INFO  root:25 - Register screen
+2019-10-04 07:24:00 INFO  root:25 - Deserializing Customer object
+2019-10-04 07:24:00 INFO  root:25 - ./serializedfiles/users/jane.dat is not in serializedfiles
+2019-10-04 07:24:00 INFO  root:25 - Deserializing Employee object
+2019-10-04 07:24:00 INFO  root:25 - Employee with username jane does not exist
+2019-10-04 07:24:06 INFO  root:25 - Serializing Employee object
+2019-10-04 07:24:06 INFO  root:25 - Login and Register screen
+2019-10-04 07:24:11 INFO  root:25 - Login screen
+2019-10-04 07:24:20 INFO  root:25 - Deserializing Customer object
+2019-10-04 07:24:20 INFO  root:25 - ./serializedfiles/users/jkdhf.dat is not in serializedfiles
+2019-10-04 07:24:20 INFO  root:25 - Deserializing Employee object
+2019-10-04 07:24:20 INFO  root:25 - Employee with username jkdhf does not exist
+2019-10-04 07:24:20 INFO  root:25 - Incorrect username / password
+2019-10-04 07:24:28 INFO  root:25 - Deserializing Customer object
+2019-10-04 07:24:28 INFO  root:25 - jane is an Employee
+2019-10-04 07:24:59 INFO  root:25 - Deserializing all Car objects
+2019-10-04 07:25:05 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 07:25:11 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 07:26:04 INFO  root:25 - Serializing Car object
+2019-10-04 07:26:08 INFO  root:25 - Deserializing all Car objects
+2019-10-04 07:26:08 INFO  root:25 - Deserializing Car object
+2019-10-04 07:26:19 INFO  root:25 - Login and Register screen
+2019-10-04 07:26:24 INFO  root:25 - Register screen
+2019-10-04 07:26:29 INFO  root:25 - Deserializing Customer object
+2019-10-04 07:26:29 INFO  root:25 - ./serializedfiles/users/customer.dat is not in serializedfiles
+2019-10-04 07:26:29 INFO  root:25 - Deserializing Employee object
+2019-10-04 07:26:29 INFO  root:25 - Employee with username customer does not exist
+2019-10-04 07:26:36 INFO  root:25 - Serializing Customer object
+2019-10-04 07:26:36 INFO  root:25 - Login and Register screen
+2019-10-04 07:26:39 INFO  root:25 - Login screen
+2019-10-04 07:26:47 INFO  root:25 - Deserializing Customer object
+2019-10-04 07:26:47 INFO  root:25 - customer is a Customer
+2019-10-04 07:26:47 INFO  root:25 - customer logged in
+2019-10-04 07:26:52 INFO  root:25 - Login and Register screen
+2019-10-04 07:26:53 INFO  root:25 - Login screen
+2019-10-04 07:26:58 INFO  root:25 - Deserializing Customer object
+2019-10-04 07:26:58 INFO  root:25 - jane is an Employee
+2019-10-04 07:27:07 INFO  root:25 - Login and Register screen
+2019-10-04 07:27:08 INFO  root:25 - Login screen
+2019-10-04 07:27:12 INFO  root:25 - Deserializing Customer object
+2019-10-04 07:27:12 INFO  root:25 - customer is a Customer
+2019-10-04 07:27:12 INFO  root:25 - customer logged in
+2019-10-04 07:27:34 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 07:27:39 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 07:27:42 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 07:27:46 INFO  root:25 - Deserializing all Car objects
+2019-10-04 07:27:46 INFO  root:25 - Deserializing Car object
+2019-10-04 07:28:09 INFO  root:25 - Deserializing Offer object
+2019-10-04 07:28:09 INFO  root:25 - Offer by customer on vin 1F7SF89 does not exist
+2019-10-04 07:28:41 INFO  root:25 - Serializing Offer object
+2019-10-04 07:28:44 INFO  root:25 - Deserializing all Car objects
+2019-10-04 07:28:44 INFO  root:25 - Deserializing Car object
+2019-10-04 07:28:55 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 07:28:55 INFO  root:25 - Deserializing Offer object
+2019-10-04 07:28:57 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 07:28:57 INFO  root:25 - Deserializing Offer object
+2019-10-04 07:28:57 INFO  root:25 - Deserializing Car object
+2019-10-04 07:31:10 INFO  root:25 - Car application started
+2019-10-04 07:31:10 INFO  root:25 - Login and Register screen
+2019-10-04 07:31:13 INFO  root:25 - Login screen
+2019-10-04 07:31:16 INFO  root:25 - Deserializing Customer object
+2019-10-04 07:31:16 INFO  root:25 - customer is a Customer
+2019-10-04 07:31:16 INFO  root:25 - customer logged in
+2019-10-04 07:31:20 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 07:31:20 INFO  root:25 - Deserializing Offer object
+2019-10-04 07:31:20 INFO  root:25 - Deserializing Car object
+2019-10-04 08:11:14 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:11:14 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:11:26 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:11:26 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:11:26 INFO  root:25 - Deserializing Car object
+2019-10-04 08:11:42 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:11:52 INFO  root:25 - Serializing Offer object
+2019-10-04 08:11:52 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:11:52 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:11:52 INFO  root:25 - Deserializing Car object
+2019-10-04 08:12:15 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:12:15 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:12:22 INFO  root:25 - Login and Register screen
+2019-10-04 08:12:25 INFO  root:25 - Login screen
+2019-10-04 08:12:31 INFO  root:25 - Deserializing Customer object
+2019-10-04 08:12:31 INFO  root:25 - jane is an Employee
+2019-10-04 08:13:32 INFO  root:25 - Deserializing all Car objects
+2019-10-04 08:13:32 INFO  root:25 - Deserializing Car object
+2019-10-04 08:13:37 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:13:37 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:13:39 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:13:39 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:13:39 INFO  root:25 - Deserializing Car object
+2019-10-04 08:15:03 INFO  root:25 - Car application started
+2019-10-04 08:15:03 INFO  root:25 - Login and Register screen
+2019-10-04 08:15:10 INFO  root:25 - Login screen
+2019-10-04 08:15:19 INFO  root:25 - Deserializing Customer object
+2019-10-04 08:15:19 INFO  root:25 - jane is an Employee
+2019-10-04 08:15:21 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:15:21 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:15:21 INFO  root:25 - Deserializing Car object
+2019-10-04 08:15:44 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:15:44 INFO  root:25 - Serializing Offer object
+2019-10-04 08:15:44 INFO  root:25 - Deserializing Car object
+2019-10-04 08:15:44 INFO  root:25 - Serializing Car object through update
+2019-10-04 08:15:44 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:15:44 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:15:47 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:15:47 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:15:47 INFO  root:25 - Deserializing Car object
+2019-10-04 08:15:47 INFO  root:25 - Deserializing Payment objects with username customer on vin 1F7SF89
+2019-10-04 08:15:47 INFO  root:25 - Calculating how much customer paid so far
+2019-10-04 08:16:57 INFO  root:25 - Car application started
+2019-10-04 08:16:57 INFO  root:25 - Login and Register screen
+2019-10-04 08:17:21 INFO  root:25 - Login screen
+2019-10-04 08:17:25 INFO  root:25 - Deserializing Customer object
+2019-10-04 08:17:25 INFO  root:25 - jane is an Employee
+2019-10-04 08:17:27 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:17:27 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:17:28 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:17:28 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:17:28 INFO  root:25 - Deserializing Car object
+2019-10-04 08:17:28 INFO  root:25 - Deserializing Payment objects with username customer on vin 1F7SF89
+2019-10-04 08:17:28 INFO  root:25 - Calculating how much customer paid so far
+2019-10-04 08:17:28 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:17:41 INFO  root:25 - Login and Register screen
+2019-10-04 08:17:43 INFO  root:25 - Login screen
+2019-10-04 08:17:46 INFO  root:25 - Deserializing Customer object
+2019-10-04 08:17:46 INFO  root:25 - customer is a Customer
+2019-10-04 08:17:46 INFO  root:25 - customer logged in
+2019-10-04 08:17:48 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:17:48 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:17:48 INFO  root:25 - Deserializing Payment objects with username customer on vin 1F7SF89
+2019-10-04 08:17:48 INFO  root:25 - Deserializing Car object
+2019-10-04 08:17:48 INFO  root:25 - Calculating how much customer paid so far
+2019-10-04 08:17:48 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:17:48 INFO  root:25 - Calculating monthly payment
+2019-10-04 08:18:02 INFO  root:25 - Deserializing Payment objects with username customer on vin 1F7SF89
+2019-10-04 08:18:02 INFO  root:25 - Calculating monthly payment
+2019-10-04 08:18:02 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:18:02 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:18:02 INFO  root:25 - Serializing Payment object
+2019-10-04 08:18:02 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:18:02 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:18:02 INFO  root:25 - Deserializing Payment objects with username customer on vin 1F7SF89
+2019-10-04 08:18:02 INFO  root:25 - Deserializing Car object
+2019-10-04 08:18:02 INFO  root:25 - Calculating how much customer paid so far
+2019-10-04 08:18:02 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:18:02 INFO  root:25 - Calculating monthly payment
+2019-10-04 08:22:54 INFO  root:25 - Deserializing Payment objects with username customer on vin 1F7SF89
+2019-10-04 08:22:54 INFO  root:25 - Calculating monthly payment
+2019-10-04 08:22:54 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:22:54 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:22:54 INFO  root:25 - Serializing Payment object
+2019-10-04 08:22:54 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:22:54 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:22:54 INFO  root:25 - Deserializing Payment objects with username customer on vin 1F7SF89
+2019-10-04 08:22:54 INFO  root:25 - Deserializing Car object
+2019-10-04 08:22:54 INFO  root:25 - Calculating how much customer paid so far
+2019-10-04 08:22:54 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:22:54 INFO  root:25 - Calculating monthly payment
+2019-10-04 08:23:09 INFO  root:25 - Car application started
+2019-10-04 08:23:09 INFO  root:25 - Login and Register screen
+2019-10-04 08:23:11 INFO  root:25 - Login screen
+2019-10-04 08:23:13 INFO  root:25 - Deserializing Customer object
+2019-10-04 08:23:13 INFO  root:25 - customer is a Customer
+2019-10-04 08:23:13 INFO  root:25 - customer logged in
+2019-10-04 08:23:20 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:23:20 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:23:21 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:23:21 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:23:21 INFO  root:25 - Deserializing Payment objects with username customer on vin 1F7SF89
+2019-10-04 08:23:21 INFO  root:25 - Deserializing Car object
+2019-10-04 08:23:21 INFO  root:25 - Calculating how much customer paid so far
+2019-10-04 08:23:21 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:23:21 INFO  root:25 - Calculating monthly payment
+2019-10-04 08:23:48 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:23:48 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:23:48 INFO  root:25 - Deserializing Payment objects with username customer on vin 1F7SF89
+2019-10-04 08:23:48 INFO  root:25 - Deserializing Car object
+2019-10-04 08:23:48 INFO  root:25 - Calculating how much customer paid so far
+2019-10-04 08:23:48 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:23:48 INFO  root:25 - Calculating monthly payment
+2019-10-04 08:23:53 INFO  root:25 - Deserializing Payment objects with username customer on vin 1F7SF89
+2019-10-04 08:23:53 INFO  root:25 - Calculating monthly payment
+2019-10-04 08:23:53 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:23:53 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:23:53 INFO  root:25 - Serializing Payment object
+2019-10-04 08:23:53 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:23:53 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:23:53 INFO  root:25 - Deserializing Payment objects with username customer on vin 1F7SF89
+2019-10-04 08:23:53 INFO  root:25 - Deserializing Car object
+2019-10-04 08:23:53 INFO  root:25 - Calculating how much customer paid so far
+2019-10-04 08:23:53 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:23:53 INFO  root:25 - Calculating monthly payment
+2019-10-04 08:24:03 INFO  root:25 - Login and Register screen
+2019-10-04 08:24:06 INFO  root:25 - Login screen
+2019-10-04 08:24:11 INFO  root:25 - Deserializing Customer object
+2019-10-04 08:24:11 INFO  root:25 - jane is an Employee
+2019-10-04 08:24:16 INFO  root:25 - Deserializing all Car objects
+2019-10-04 08:24:16 INFO  root:25 - Deserializing Car object
+2019-10-04 08:24:19 INFO  root:25 - Deserializing all Offer objects
+2019-10-04 08:24:19 INFO  root:25 - Deserializing Offer object
+2019-10-04 08:24:19 INFO  root:25 - Deserializing Car object
+2019-10-04 08:24:19 INFO  root:25 - Deserializing Payment objects with username customer on vin 1F7SF89
+2019-10-04 08:24:19 INFO  root:25 - Calculating how much customer paid so far
+2019-10-04 08:24:19 INFO  root:25 - Calculating how much more is owed
+2019-10-04 08:25:27 INFO  root:25 - Login and Register screen

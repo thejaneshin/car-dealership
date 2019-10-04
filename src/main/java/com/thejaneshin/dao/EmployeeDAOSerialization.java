@@ -12,6 +12,7 @@ import java.util.Set;
 
 import com.thejaneshin.pojo.Employee;
 import com.thejaneshin.pojo.User;
+import static com.thejaneshin.util.LoggerUtil.*;
 
 public class EmployeeDAOSerialization implements EmployeeDAO {
 
@@ -19,13 +20,16 @@ public class EmployeeDAOSerialization implements EmployeeDAO {
 	public void createEmployee(Employee employee) {
 		String fileName;
 		
+		info("Serializing Employee object");
+		
 		if (employee.getUsername() != null) {
 			fileName = "./serializedfiles/users/" + employee.getUsername() + ".dat";
 			if (new File(fileName).exists()) {
-				throw new IllegalArgumentException("Username already taken");
+				warn("Employee with username " + employee.getUsername() + " already exists");
 			}
 		}
 		else {
+			error("Employee doesn't have a username");
 			fileName = "./serializedfiles/mysteryuser.dat";
 		}
 		
@@ -34,25 +38,27 @@ public class EmployeeDAOSerialization implements EmployeeDAO {
 				ObjectOutputStream oos = new ObjectOutputStream(fos);) {
 			oos.writeObject(employee);
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		} catch (IOException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 	}
 
 	@Override
-	public Employee readEmployee(String username) {
+	public User readEmployee(String username) {
 		String fileName = "./serializedfiles/users/" + username + ".dat";
 		
-		Employee ret = null;
+		info("Deserializing Employee object");
+		
+		User ret = null;
 		
 		try (FileInputStream fis = new FileInputStream(fileName);
 				ObjectInputStream ois = new ObjectInputStream(fis);) {
-			ret = (Employee) ois.readObject();
+			ret = (User) ois.readObject();
 		} catch (IOException e) {
-			e.printStackTrace();
+			info("Employee with username " + username + " does not exist");
 		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return ret;
@@ -61,6 +67,8 @@ public class EmployeeDAOSerialization implements EmployeeDAO {
 	@Override
 	public Set<Employee> readAllEmployees() {
 		Set<Employee> allEmployees = new HashSet<>();
+		
+		info("Deserializing all Employee objects");
 		
 		File file = new File("./serializedfiles/users");
 		for (File f : file.listFiles()) {
@@ -72,13 +80,12 @@ public class EmployeeDAOSerialization implements EmployeeDAO {
 					allEmployees.add((Employee) tempUser);
 				}
 			} catch (FileNotFoundException e) {
-				e.printStackTrace();
+				warn(e.getMessage());
 			} catch (IOException e) {
-				e.printStackTrace();
+				error(e.getMessage());
 			} catch (ClassNotFoundException e) {
-				e.printStackTrace();
-			}
-			
+				error(e.getMessage());
+			}		
 		}
 		
 		return allEmployees;

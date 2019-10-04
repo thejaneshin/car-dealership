@@ -10,4 +10,8 @@ public interface CarDAO {
 	public Car readCar(String vin);
 	
 	public Set<Car> readAllCars();
+	
+	public Car updateCar(Car car);
+	
+	public void deleteCar(Car car);
 }

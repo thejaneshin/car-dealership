@@ -3,11 +3,12 @@ package com.thejaneshin.dao;
 import java.util.Set;
 
 import com.thejaneshin.pojo.Employee;
+import com.thejaneshin.pojo.User;
 
 public interface EmployeeDAO {
 	public void createEmployee(Employee e);
 	
-	public Employee readEmployee(String username);
+	public User readEmployee(String username);
 	
 	public Set<Employee> readAllEmployees();
 	

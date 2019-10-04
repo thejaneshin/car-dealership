@@ -10,6 +10,8 @@ import java.io.ObjectOutputStream;
 import java.util.HashSet;
 import java.util.Set;
 
+import static com.thejaneshin.util.LoggerUtil.*;
+
 import com.thejaneshin.pojo.Customer;
 import com.thejaneshin.pojo.User;
 
@@ -19,40 +21,43 @@ public class CustomerDAOSerialization implements CustomerDAO {
 	public void createCustomer(Customer customer) {
 		String fileName;
 		
+		info("Serializing Customer object");
+		
 		if (customer.getUsername() != null) {
 			fileName = "./serializedfiles/users/" + customer.getUsername() + ".dat";
 			if (new File(fileName).exists()) {
-				throw new IllegalArgumentException("Username already taken");
+				warn("Customer with username " + customer.getUsername() + " already exists");
 			}
 		}
 		else {
 			fileName = "./serializedfiles/mysteryuser.dat";
 		}
 		
-		
 		try (FileOutputStream fos = new FileOutputStream(fileName);
 				ObjectOutputStream oos = new ObjectOutputStream(fos);) {
 			oos.writeObject(customer);
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		} catch (IOException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 	}
 
 	@Override
-	public Customer readCustomer(String username) {
+	public User readCustomer(String username) {
 		String fileName = "./serializedfiles/users/" + username + ".dat";
 		
-		Customer ret = null;
+		info("Deserializing Customer object");
+		
+		User ret = null;
 		
 		try (FileInputStream fis = new FileInputStream(fileName);
 				ObjectInputStream ois = new ObjectInputStream(fis);) {
-			ret = (Customer) ois.readObject();
+			ret = (User) ois.readObject();
 		} catch (IOException e) {
-			e.printStackTrace();
+			info(fileName + " is not in serializedfiles");
 		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return ret;
@@ -61,6 +66,8 @@ public class CustomerDAOSerialization implements CustomerDAO {
 	@Override
 	public Set<Customer> readAllCustomers() {
 		Set<Customer> allCustomers = new HashSet<>();
+		
+		info("Deserializing all Customer objects");
 		
 		File file = new File("./serializedfiles/users");
 		for (File f : file.listFiles()) {
@@ -72,16 +79,32 @@ public class CustomerDAOSerialization implements CustomerDAO {
 					allCustomers.add((Customer) tempUser);
 				}
 			} catch (FileNotFoundException e) {
-				e.printStackTrace();
+				error(e.getMessage());
 			} catch (IOException e) {
-				e.printStackTrace();
+				error(e.getMessage());
 			} catch (ClassNotFoundException e) {
-				e.printStackTrace();
+				error(e.getMessage());
 			}
-			
 		}
 		
 		return allCustomers;
+	}
+
+	@Override
+	public Customer updateCustomer(Customer customer) {
+		String fileName = "./serializedfiles/users/" + customer.getUsername() + ".dat";
+		
+		info("Serializing Customer object through update");
+		
+		try (FileOutputStream fos = new FileOutputStream(fileName);
+				ObjectOutputStream oos = new ObjectOutputStream(fos);) {
+			oos.writeObject(customer);
+		} catch (FileNotFoundException e) {
+			warn(e.getMessage());
+		} catch (IOException e) {
+			error(e.getMessage());
+		}
+		return customer;
 	}
 
 }

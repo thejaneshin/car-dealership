@@ -11,6 +11,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.thejaneshin.pojo.Car;
+import static com.thejaneshin.util.LoggerUtil.*;
 
 public class CarDAOSerialization implements CarDAO {
 
@@ -18,10 +19,12 @@ public class CarDAOSerialization implements CarDAO {
 	public void createCar(Car car) {
 		String fileName;
 		
+		info("Serializing Car object");
+		
 		if (car.getVin() != null) {
 			fileName = "./serializedfiles/cars/" + car.getVin() + ".dat";
 			if (new File(fileName).exists()) {
-				throw new IllegalArgumentException("Vin already exists");
+				warn("Vin" + car.getVin() + " already exists");
 			}
 		}
 		else {
@@ -32,9 +35,9 @@ public class CarDAOSerialization implements CarDAO {
 				ObjectOutputStream oos = new ObjectOutputStream(fos);) {
 			oos.writeObject(car);
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		} catch (IOException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 	}
 
@@ -42,15 +45,17 @@ public class CarDAOSerialization implements CarDAO {
 	public Car readCar(String vin) {
 		String fileName = "./serializedfiles/cars/" + vin + ".dat";
 		
+		info("Deserializing Car object");
+		
 		Car returnCar = null;
 		
 		try (FileInputStream fis = new FileInputStream(fileName);
 				ObjectInputStream ois = new ObjectInputStream(fis);) {
 			returnCar = (Car) ois.readObject();
 		} catch (IOException e) {
-			e.printStackTrace();
+			info("Car with vin " + vin + " does not exist");
 		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return returnCar;
@@ -60,6 +65,8 @@ public class CarDAOSerialization implements CarDAO {
 	public Set<Car> readAllCars() {
 		Set<Car> allCars = new HashSet<>();
 		
+		info("Deserializing all Car objects");
+		
 		File file = new File("./serializedfiles/cars");
 		for (File f : file.listFiles()) {
 			String tempVin = f.getName().replace(".dat", "");
@@ -68,6 +75,40 @@ public class CarDAOSerialization implements CarDAO {
 		}
 		
 		return allCars;
+	}
+
+	@Override
+	public Car updateCar(Car car) {
+		String fileName = "./serializedfiles/cars/" + car.getVin() + ".dat";
+		
+		info("Serializing Car object through update");
+		
+		try (FileOutputStream fos = new FileOutputStream(fileName);
+				ObjectOutputStream oos = new ObjectOutputStream(fos);) {
+			oos.writeObject(car);
+		} catch (FileNotFoundException e) {
+			warn(e.getMessage());
+		} catch (IOException e) {
+			error(e.getMessage());
+		}
+		return car;
+	}
+	
+	@Override
+	public void deleteCar(Car car) {
+		String fileName = "./serializedfiles/cars/" + car.getVin() + ".dat";
+		
+		File file = new File(fileName);
+		
+		info("Deleting Car file");
+		
+		if (file.exists()) {
+			file.delete();
+		}
+		else {
+			warn("Car with vin " + car.getVin() + " is nonexistent");
+		}
+		
 	}
 
 }

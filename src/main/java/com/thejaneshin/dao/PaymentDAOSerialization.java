@@ -7,64 +7,82 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.LinkedList;
+import java.util.List;
 
 import com.thejaneshin.pojo.Payment;
+import static com.thejaneshin.util.LoggerUtil.*;
 
 public class PaymentDAOSerialization implements PaymentDAO {
 
 	@Override
 	public void createPayment(Payment p) {
-		String fileName;
+		String startFileName = p.getPayer() + "+" + p.getPaidCar();
 		
-		if (p.getPayer() != null && p.getPaidCar() != null) {
-			fileName = "./serializedfiles/payments/" + p.getPayer() +
-					"+" + p.getPaidCar() + ".dat";
+		info("Serializing Payment object");
+		
+		int count = 1;
+		
+		for (File f : new File("./serializedfiles/payments").listFiles()) {
+			if (f.getName().startsWith(startFileName)) {
+				count++;
+			}
 		}
-		else {
-			fileName = "./serializedfiles/mysterypayment.dat";
-		}
+		
+		String fileName = "./serializedfiles/payments/" + startFileName + "+" + count + ".dat";
+		
+		p.setPaidMonth(count);
 		
 		try (FileOutputStream fos = new FileOutputStream(fileName);
 				ObjectOutputStream oos = new ObjectOutputStream(fos);) {
 			oos.writeObject(p);
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		} catch (IOException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 	}
 
 	@Override
-	public Payment readPaymentByUsernameAndVin(String username, String vin) {
-		String fileName = "./serializedfiles/payments/" + username +
-				"+" + vin + ".dat";
+	public List<Payment> readPaymentsByUsernameAndVin(String username, String vin) {
+		String startFileName = username + "+" + vin;
 		
-		Payment returnPayment = null;
+		info("Deserializing Payment objects with username " + username + " on vin "
+				+ vin);
 		
-		try (FileInputStream fis = new FileInputStream(fileName);
-				ObjectInputStream ois = new ObjectInputStream(fis);) {
-			returnPayment = (Payment) ois.readObject();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+		List<Payment> paidPayments = new LinkedList<>();
+		
+		for (File f : new File("./serializedfiles/payments").listFiles()) {
+			if (f.getName().startsWith(startFileName)) {
+				try (FileInputStream fis = new FileInputStream(f);
+						ObjectInputStream ois = new ObjectInputStream(fis);) {
+					paidPayments.add((Payment) ois.readObject());
+				} catch (IOException e) {
+					warn(e.getMessage());
+				} catch (ClassNotFoundException e) {
+					error(e.getMessage());
+				}
+			}
 		}
 		
-		return returnPayment;
+		return paidPayments;
 	}
 
 	@Override
-	public Set<Payment> readAllPayments() {
-		Set<Payment> allPayments = new HashSet<>();
+	public List<Payment> readAllPayments() {
+		List<Payment> allPayments = new LinkedList<>();
 		
-		File file = new File("./serializedfiles/payments");
-		for (File f : file.listFiles()) {
-			String noExt = f.getName().replace(".dat", "");
-			String[] parts = noExt.split("\\+");
-			Payment tempPayment = readPaymentByUsernameAndVin(parts[0], parts[1]);
-			allPayments.add(tempPayment);
+		info("Deserializing all Payment objects");
+		
+		for (File f : new File("./serializedfiles/payments").listFiles()) {
+			try (FileInputStream fis = new FileInputStream(f);
+					ObjectInputStream ois = new ObjectInputStream(fis);) {
+				allPayments.add((Payment) ois.readObject());
+			} catch (IOException e) {
+				warn(e.getMessage());
+			} catch (ClassNotFoundException e) {
+				error(e.getMessage());
+			}
 		}
 		
 		return allPayments;
