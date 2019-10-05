@@ -213,8 +213,8 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 			if (o.getOfferer().equals(customer.getUsername()) && o.getStatus().equals(Offer.StatusType.ACCEPTED)) {
 				acceptedCars.add(o);
 				Car c = carDAO.readCar(o.getOfferedCar());
-				System.out.println(c.getColor() + " " + c.getMake() + " " + c.getModel()
-						+ " " + c.getYear() + " [" + c.getVin() + "] - $" + o.getValue());
+				System.out.printf(c.getColor() + " " + c.getMake() + " " + c.getModel()
+						+ " " + c.getYear() + " [" + c.getVin() + "] - $%.2f\n", o.getValue());
 			}
 		}
 		
