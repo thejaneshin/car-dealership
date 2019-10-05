@@ -1,5 +1,10 @@
 package com.thejaneshin.driver;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Scanner;
 
 import com.thejaneshin.dao.CustomerDAO;
@@ -13,6 +18,8 @@ import com.thejaneshin.service.CustomerService;
 import com.thejaneshin.service.CustomerServiceConsoleImpl;
 import com.thejaneshin.service.EmployeeService;
 import com.thejaneshin.service.EmployeeServiceConsoleImpl;
+import com.thejaneshin.util.ConnectionFactory;
+
 import static com.thejaneshin.util.LoggerUtil.*;
 
 public class Driver {
@@ -22,6 +29,14 @@ public class Driver {
 	
 	public static void main(String[] args) {
 		info("Car application started");
+		
+		
+		try (Connection conn = ConnectionFactory.getConnection();) {
+			System.out.println("Ok");
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		
 		while (true) {
 			System.out.println("WELCOME!");

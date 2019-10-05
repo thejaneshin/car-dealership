@@ -468,3 +468,23 @@
 2019-10-04 09:42:10 INFO  root:25 - Calculating how much customer paid so far
 2019-10-04 09:42:10 INFO  root:25 - Calculating how much more is owed
 2019-10-04 09:42:10 INFO  root:25 - Calculating monthly payment
+2019-10-05 19:17:55 INFO  root:25 - Car application started
+2019-10-05 19:17:55 INFO  root:25 - Login and Register screen
+2019-10-05 19:20:53 INFO  root:25 - Car application started
+2019-10-05 19:20:53 INFO  root:25 - Login and Register screen
+2019-10-05 19:24:27 INFO  root:25 - Car application started
+2019-10-05 19:24:27 INFO  root:25 - Login and Register screen
+2019-10-05 19:24:35 INFO  root:25 - Car application started
+2019-10-05 19:24:35 INFO  root:25 - Login and Register screen
+2019-10-05 19:25:44 INFO  root:25 - Car application started
+2019-10-05 19:25:44 INFO  root:25 - Login and Register screen
+2019-10-05 19:30:54 INFO  root:25 - Car application started
+2019-10-05 19:30:54 INFO  root:25 - Login and Register screen
+2019-10-05 19:32:03 INFO  root:25 - Car application started
+2019-10-05 19:32:03 INFO  root:25 - Login and Register screen
+2019-10-05 19:33:05 INFO  root:25 - Car application started
+2019-10-05 19:33:05 INFO  root:25 - Login and Register screen
+2019-10-05 19:39:39 INFO  root:25 - Car application started
+2019-10-05 19:39:41 INFO  root:25 - Login and Register screen
+2019-10-05 19:41:56 INFO  root:25 - Car application started
+2019-10-05 19:41:58 INFO  root:25 - Login and Register screen
