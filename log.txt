@@ -488,3 +488,108 @@
 2019-10-05 19:39:41 INFO  root:25 - Login and Register screen
 2019-10-05 19:41:56 INFO  root:25 - Car application started
 2019-10-05 19:41:58 INFO  root:25 - Login and Register screen
+2019-10-05 19:56:03 INFO  root:25 - Car application started
+2019-10-05 19:56:05 INFO  root:25 - Login and Register screen
+2019-10-06 17:18:27 INFO  root:25 - Car application started
+2019-10-06 17:18:30 INFO  root:25 - Login and Register screen
+2019-10-06 17:20:53 INFO  root:25 - Car application started
+2019-10-06 17:20:56 INFO  root:25 - Login and Register screen
+2019-10-06 17:23:01 INFO  root:25 - Car application started
+2019-10-06 17:23:04 INFO  root:25 - Login and Register screen
+2019-10-06 17:44:26 INFO  root:25 - Car application started
+2019-10-06 17:44:29 INFO  root:25 - Login and Register screen
+2019-10-06 17:46:38 INFO  root:25 - Car application started
+2019-10-06 17:46:40 INFO  root:25 - Login and Register screen
+2019-10-06 18:51:59 INFO  root:25 - Car application started
+2019-10-06 18:52:02 INFO  root:25 - Login and Register screen
+2019-10-06 20:55:11 INFO  root:25 - Car application started
+2019-10-06 20:56:00 INFO  root:25 - Car application started
+2019-10-06 20:56:03 INFO  root:25 - Login and Register screen
+2019-10-06 20:56:16 INFO  root:25 - Car application started
+2019-10-06 20:56:19 INFO  root:25 - Login and Register screen
+2019-10-06 20:57:31 INFO  root:25 - Car application started
+2019-10-06 20:57:34 INFO  root:25 - Login and Register screen
+2019-10-06 20:58:20 INFO  root:25 - Car application started
+2019-10-06 20:58:23 INFO  root:25 - Login and Register screen
+2019-10-06 20:58:41 INFO  root:25 - Car application started
+2019-10-06 20:58:44 INFO  root:25 - Login and Register screen
+2019-10-06 21:02:50 INFO  root:25 - Car application started
+2019-10-06 21:02:53 INFO  root:25 - Login and Register screen
+2019-10-06 21:25:07 INFO  root:25 - Car application started
+2019-10-06 21:25:10 INFO  root:25 - Login and Register screen
+2019-10-06 21:25:41 INFO  root:25 - Car application started
+2019-10-06 21:25:44 INFO  root:25 - Login and Register screen
+2019-10-06 21:26:12 INFO  root:25 - Car application started
+2019-10-06 21:26:14 INFO  root:25 - Login and Register screen
+2019-10-06 21:27:20 INFO  root:25 - Car application started
+2019-10-06 21:27:23 INFO  root:25 - Login and Register screen
+2019-10-06 21:28:44 INFO  root:25 - Car application started
+2019-10-06 21:28:47 INFO  root:25 - Login and Register screen
+2019-10-06 21:30:46 INFO  root:25 - Car application started
+2019-10-06 21:30:48 INFO  root:25 - Login and Register screen
+2019-10-06 21:33:47 INFO  root:25 - Car application started
+2019-10-06 21:33:50 INFO  root:25 - Login and Register screen
+2019-10-06 21:44:31 INFO  root:25 - Car application started
+2019-10-06 21:44:33 INFO  root:25 - Login and Register screen
+2019-10-06 21:45:16 INFO  root:25 - Car application started
+2019-10-06 21:45:18 INFO  root:25 - Login and Register screen
+2019-10-06 21:46:31 INFO  root:25 - Car application started
+2019-10-06 21:46:33 INFO  root:25 - Login and Register screen
+2019-10-06 21:47:00 INFO  root:25 - Car application started
+2019-10-06 21:47:02 INFO  root:25 - Login and Register screen
+2019-10-06 21:47:16 INFO  root:25 - Car application started
+2019-10-06 21:47:19 INFO  root:25 - Login and Register screen
+2019-10-06 21:47:32 INFO  root:25 - Car application started
+2019-10-06 21:47:35 INFO  root:25 - Login and Register screen
+2019-10-06 22:00:41 INFO  root:25 - Car application started
+2019-10-06 22:00:44 INFO  root:25 - Login and Register screen
+2019-10-06 22:01:04 INFO  root:25 - Car application started
+2019-10-06 22:01:07 INFO  root:25 - Login and Register screen
+2019-10-06 22:01:29 INFO  root:25 - Car application started
+2019-10-06 22:01:32 INFO  root:25 - Login and Register screen
+2019-10-06 22:12:56 INFO  root:25 - Car application started
+2019-10-06 22:12:59 INFO  root:25 - Login and Register screen
+2019-10-06 22:13:25 INFO  root:25 - Car application started
+2019-10-06 22:13:28 INFO  root:25 - Login and Register screen
+2019-10-06 22:56:22 INFO  root:25 - Car application started
+2019-10-06 22:56:23 INFO  root:25 - Login and Register screen
+2019-10-06 22:56:52 INFO  root:25 - Car application started
+2019-10-06 22:56:52 INFO  root:25 - Login and Register screen
+2019-10-06 22:57:21 INFO  root:25 - Car application started
+2019-10-06 22:57:21 INFO  root:25 - Login and Register screen
+2019-10-06 22:58:17 INFO  root:25 - Car application started
+2019-10-06 22:58:18 INFO  root:25 - Login and Register screen
+2019-10-06 23:04:19 INFO  root:25 - Car application started
+2019-10-06 23:04:20 INFO  root:25 - Login and Register screen
+2019-10-06 23:04:55 INFO  root:25 - Car application started
+2019-10-06 23:04:56 INFO  root:25 - Login and Register screen
+2019-10-07 13:18:26 INFO  root:25 - Car application started
+2019-10-07 13:18:27 INFO  root:25 - Login and Register screen
+2019-10-07 13:45:17 INFO  root:25 - Car application started
+2019-10-07 13:45:18 INFO  root:25 - Login and Register screen
+2019-10-07 13:46:03 INFO  root:25 - Car application started
+2019-10-07 13:46:04 INFO  root:25 - Login and Register screen
+2019-10-07 13:46:17 INFO  root:25 - Car application started
+2019-10-07 13:46:18 INFO  root:25 - Login and Register screen
+2019-10-07 13:47:52 INFO  root:25 - Car application started
+2019-10-07 13:47:53 INFO  root:25 - Login and Register screen
+2019-10-07 13:53:41 INFO  root:25 - Car application started
+2019-10-07 13:53:42 INFO  root:25 - Login and Register screen
+2019-10-07 13:53:53 INFO  root:25 - Car application started
+2019-10-07 13:53:55 INFO  root:25 - Login and Register screen
+2019-10-07 13:56:15 INFO  root:25 - Car application started
+2019-10-07 13:56:16 INFO  root:25 - Login and Register screen
+2019-10-07 13:56:30 INFO  root:25 - Car application started
+2019-10-07 13:56:31 INFO  root:25 - Login and Register screen
+2019-10-07 14:00:27 INFO  root:25 - Car application started
+2019-10-07 14:00:28 INFO  root:25 - Login and Register screen
+2019-10-07 14:08:46 INFO  root:25 - Car application started
+2019-10-07 14:09:08 INFO  root:25 - Car application started
+2019-10-07 14:09:15 INFO  root:25 - Car application started
+2019-10-07 14:09:16 INFO  root:25 - Login and Register screen
+2019-10-07 14:11:08 INFO  root:25 - Car application started
+2019-10-07 14:11:09 INFO  root:25 - Login and Register screen
+2019-10-07 14:11:39 INFO  root:25 - Car application started
+2019-10-07 14:11:40 INFO  root:25 - Login and Register screen
+2019-10-07 14:13:26 INFO  root:25 - Car application started
+2019-10-07 14:13:26 INFO  root:25 - Login and Register screen

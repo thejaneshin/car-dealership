@@ -9,32 +9,32 @@ public class Offer implements Serializable {
 		PENDING, ACCEPTED, REJECTED;
 	}
 	
-	private double value;
+	private double amount;
 	
 	private StatusType status;
 	
-	private String offerer;
-	
 	private String offeredCar;
+	
+	private String offerer;
 	
 	public Offer() {
 		super();
 	}
 
-	public Offer(double value, StatusType status, String offerer, String offeredCar) {
+	public Offer(double amount, StatusType status, String offeredCar, String offerer) {
 		super();
-		this.value = value;
+		this.amount = amount;
 		this.status = status;
-		this.offerer = offerer;
 		this.offeredCar = offeredCar;
+		this.offerer = offerer;
 	}
 
-	public double getValue() {
-		return value;
+	public double getAmount() {
+		return amount;
 	}
 
-	public void setValue(double value) {
-		this.value = value;
+	public void setAmount(double amount) {
+		this.amount = amount;
 	}
 
 	public StatusType getStatus() {
@@ -69,7 +69,7 @@ public class Offer implements Serializable {
 		result = prime * result + ((offerer == null) ? 0 : offerer.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		long temp;
-		temp = Double.doubleToLongBits(value);
+		temp = Double.doubleToLongBits(amount);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
@@ -95,7 +95,7 @@ public class Offer implements Serializable {
 			return false;
 		if (status != other.status)
 			return false;
-		if (Double.doubleToLongBits(value) != Double.doubleToLongBits(other.value))
+		if (Double.doubleToLongBits(amount) != Double.doubleToLongBits(other.amount))
 			return false;
 		return true;
 	}

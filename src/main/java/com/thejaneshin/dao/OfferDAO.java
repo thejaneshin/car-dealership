@@ -1,6 +1,6 @@
 package com.thejaneshin.dao;
 
-import java.util.Set;
+import java.util.List;
 
 import com.thejaneshin.pojo.Offer;
 
@@ -9,9 +9,11 @@ public interface OfferDAO {
 	
 	public Offer readOfferByUsernameAndVin(String username, String vin);
 	
-	public Set<Offer> readAllOffers();
+	public List<Offer> readAllOffers();
 	
-	public Offer updateOffer(Offer o);
+	public void updateOfferAmount(Offer o);
+	
+	public void updateOfferStatus(Offer o);
 	
 	public void deleteOffer(Offer o);
 }

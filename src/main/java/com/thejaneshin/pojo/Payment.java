@@ -7,31 +7,29 @@ public class Payment implements Serializable {
 
 	private double amount;
 	
+	private int paidMonth;
+	
 	private String paidCar;
 	
 	private String payer;
-	
-	private int paidMonth;
 	
 	public Payment() {
 		super();
 	}
 
-	// If not provided with paidMonth parameter
-	public Payment(double amount, String payer, String paidCar) {
+	public Payment(double amount, String paidCar, String payer) {
 		super();
 		this.amount = amount;
 		this.paidCar = paidCar;
 		this.payer = payer;
-		this.paidMonth = -1;
 	}
-	
-	public Payment(double amount, String payer, String paidCar, int paidMonth) {
+
+	public Payment(double amount, int paidMonth, String paidCar, String payer) {
 		super();
 		this.amount = amount;
+		this.paidMonth = paidMonth;
 		this.paidCar = paidCar;
 		this.payer = payer;
-		this.paidMonth = paidMonth;
 	}
 
 	public double getAmount() {
@@ -40,6 +38,14 @@ public class Payment implements Serializable {
 
 	public void setAmount(double amount) {
 		this.amount = amount;
+	}
+
+	public int getPaidMonth() {
+		return paidMonth;
+	}
+
+	public void setPaidMonth(int paidMonth) {
+		this.paidMonth = paidMonth;
 	}
 
 	public String getPaidCar() {
@@ -56,14 +62,6 @@ public class Payment implements Serializable {
 
 	public void setPayer(String payer) {
 		this.payer = payer;
-	}
-
-	public int getPaidMonth() {
-		return paidMonth;
-	}
-
-	public void setPaidMonth(int paidMonth) {
-		this.paidMonth = paidMonth;
 	}
 
 	@Override

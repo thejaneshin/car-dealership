@@ -5,6 +5,10 @@ import java.io.Serializable;
 public class User implements Serializable {
 	private static final long serialVersionUID = -3122598083806397237L;
 
+	public enum RoleType {
+		CUSTOMER, EMPLOYEE;
+	}
+	
 	private String username;
 	
 	private String password;
@@ -13,16 +17,19 @@ public class User implements Serializable {
 	
 	private String lastName;
 	
+	private RoleType role;
+	
 	public User() {
 		super();
 	}
 
-	public User(String username, String password, String firstName, String lastName) {
+	public User(String username, String password, String firstName, String lastName, RoleType role) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.role = role;
 	}
 
 	public String getUsername() {
@@ -56,6 +63,14 @@ public class User implements Serializable {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
+	public RoleType getRole() {
+		return role;
+	}
+
+	public void setRole(RoleType role) {
+		this.role = role;
+	}
 
 	@Override
 	public int hashCode() {
@@ -64,6 +79,7 @@ public class User implements Serializable {
 		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
+		result = prime * result + ((role == null) ? 0 : role.hashCode());
 		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
@@ -91,6 +107,8 @@ public class User implements Serializable {
 			if (other.password != null)
 				return false;
 		} else if (!password.equals(other.password))
+			return false;
+		if (role != other.role)
 			return false;
 		if (username == null) {
 			if (other.username != null)

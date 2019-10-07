@@ -1,6 +1,6 @@
 package com.thejaneshin.dao;
 
-import java.util.Set;
+import java.util.List;
 
 import com.thejaneshin.pojo.Car;
 
@@ -9,9 +9,11 @@ public interface CarDAO {
 	
 	public Car readCar(String vin);
 	
-	public Set<Car> readAllCars();
+	public List<Car> readAllCars();
 	
-	public Car updateCar(Car car);
+	public void updateCarStatus(Car car);
+	
+	public void updateCarOwner(Car car);
 	
 	public void deleteCar(Car car);
 }
