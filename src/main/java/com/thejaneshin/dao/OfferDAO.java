@@ -9,6 +9,12 @@ public interface OfferDAO {
 	
 	public Offer readOfferByUsernameAndVin(String username, String vin);
 	
+	public List<Offer> readAllOffersByUsername(String username);
+	
+	public List<Offer> readAllPendingOffers();
+	
+	public List<Offer> readAllAcceptedOffers();
+	
 	public List<Offer> readAllOffers();
 	
 	public void updateOfferAmount(Offer o);

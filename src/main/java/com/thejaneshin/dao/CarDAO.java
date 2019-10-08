@@ -9,6 +9,10 @@ public interface CarDAO {
 	
 	public Car readCar(String vin);
 	
+	public List<Car> readAllLotCars();
+	
+	public List<Car> readYourCars(String username);
+	
 	public List<Car> readAllCars();
 	
 	public void updateCarStatus(Car car);

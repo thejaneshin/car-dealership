@@ -57,7 +57,74 @@ public class OfferDAOPostgres implements OfferDAO {
 		
 		return offer;
 	}
+	
+	@Override
+	public List<Offer> readAllOffersByUsername(String username) {
+		List<Offer> offers = new LinkedList<>();
+		String sql = "select * from offer where offerer = ?";
+		
+		try {
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setString(1, username);
+			
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				offers.add(new Offer(rs.getDouble(2), Offer.StatusType.valueOf(rs.getString(3)), rs.getString(4), rs.getString(5)));
+			}
+					
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return offers;
+	}
 
+	@Override
+	public List<Offer> readAllPendingOffers() {
+		List<Offer> offers = new LinkedList<>();
+		String sql = "select * from offer where offer_status = ?";
+		
+		try {
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setString(1, Offer.StatusType.PENDING.name());
+			
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				offers.add(new Offer(rs.getDouble(2), Offer.StatusType.valueOf(rs.getString(3)), rs.getString(4), rs.getString(5)));
+			}
+					
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return offers;
+	}
+	
+	@Override
+	public List<Offer> readAllAcceptedOffers() {
+		List<Offer> offers = new LinkedList<>();
+		String sql = "select * from offer where offer_status = ?";
+		
+		try {
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setString(1, Offer.StatusType.ACCEPTED.name());
+			
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				offers.add(new Offer(rs.getDouble(2), Offer.StatusType.valueOf(rs.getString(3)), rs.getString(4), rs.getString(5)));
+			}
+					
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return offers;
+	}
+
+	
 	@Override
 	public List<Offer> readAllOffers() {
 		List<Offer> offers = new LinkedList<>();
@@ -125,5 +192,4 @@ public class OfferDAOPostgres implements OfferDAO {
 		}
 
 	}
-
 }

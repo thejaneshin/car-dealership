@@ -38,7 +38,7 @@ public class PaymentDAOPostgres implements PaymentDAO {
 	@Override
 	public List<Payment> readPaymentsByUsernameAndVin(String username, String vin) {
 		List<Payment> payments = new LinkedList<>();
-		String sql = "select * from car where username = ? and vin = ?";
+		String sql = "select * from payment where payer = ? and paid_car = ?";
 		
 		try {
 			PreparedStatement stmt = conn.prepareStatement(sql);
@@ -61,7 +61,7 @@ public class PaymentDAOPostgres implements PaymentDAO {
 	@Override
 	public List<Payment> readAllPayments() {
 		List<Payment> payments = new LinkedList<>();
-		String sql = "select * from car";
+		String sql = "select * from payment";
 		
 		try {
 			PreparedStatement stmt = conn.prepareStatement(sql);

@@ -1,36 +1,35 @@
 package com.thejaneshin.service;
 
-import java.util.HashSet;
+import static com.thejaneshin.util.LoggerUtil.warn;
+
 import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Set;
 
 import com.thejaneshin.dao.CarDAO;
-import com.thejaneshin.dao.CarDAOSerialization;
+import com.thejaneshin.dao.CarDAOPostgres;
 import com.thejaneshin.dao.OfferDAO;
-import com.thejaneshin.dao.OfferDAOSerialization;
+import com.thejaneshin.dao.OfferDAOPostgres;
 import com.thejaneshin.dao.PaymentDAO;
-import com.thejaneshin.dao.PaymentDAOSerialization;
+import com.thejaneshin.dao.PaymentDAOPostgres;
 import com.thejaneshin.pojo.Car;
-import com.thejaneshin.pojo.Employee;
 import com.thejaneshin.pojo.Offer;
 import com.thejaneshin.pojo.Payment;
+import com.thejaneshin.pojo.User;
 import com.thejaneshin.util.PaymentCalcImpl;
 import com.thejaneshin.util.PaymentCalculator;
-import static com.thejaneshin.util.LoggerUtil.*;
 
 public class EmployeeServiceConsoleImpl implements EmployeeService {
 	private static Scanner sc = new Scanner(System.in);
-	private static CarDAO carDAO = new CarDAOSerialization();
-	private static OfferDAO offerDAO = new OfferDAOSerialization();
-	private static PaymentDAO paymentDAO = new PaymentDAOSerialization();
+	private static CarDAO carDAO = new CarDAOPostgres();
+	private static OfferDAO offerDAO = new OfferDAOPostgres();
+	private static PaymentDAO paymentDAO = new PaymentDAOPostgres();
 	private static PaymentCalculator payCalc = new PaymentCalcImpl();
-	private static Employee employee;
+	private static User employee;
 	
 	@Override
-	public void run(Employee currentEmployee) {
+	public void run(User currentEmployee) {
 		employee = currentEmployee;
 		
 		System.out.println("\nWELCOME, " + employee.getFirstName() +
@@ -56,7 +55,7 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 					removeCarFromLot();
 				}
 				else if (menuOption.equals("4")) {
-					viewAllOffers();
+					viewAllPendingOffers();
 				}
 				else if (menuOption.equals("5")) {
 					viewAllPayments();
@@ -64,20 +63,13 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 				else if (menuOption.equals("q")) {
 					break;
 				}
-				
 			}
 		
 	}
 
 	@Override
 	public void viewLotCars() {
-		Set<Car> lotCars = new HashSet<>();
-		
-		for (Car c : carDAO.readAllCars()) {
-			if (c.getStatus() == Car.StatusType.IN_LOT) {
-				lotCars.add(c);
-			}
-		}
+		List<Car> lotCars = carDAO.readAllLotCars();
 		
 		System.out.println("\nCARS ON THE LOT:");
 		
@@ -140,7 +132,7 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 				continue;
 			}
 			
-			Car newCar = new Car(vin, make, model, year, color, Car.StatusType.IN_LOT);
+			Car newCar = new Car(vin, make, model, year, color, Car.StatusType.IN_LOT, null);
 			carDAO.createCar(newCar);
 			
 			System.out.println("\nCar successfully added to lot!");
@@ -162,18 +154,11 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 			Car removedCar = carDAO.readCar(vin);
 			
 			if (removedCar == null) {
-				System.out.println("Please enter a valid vin number");
+				System.out.println("Please enter a valid vin number from the lot");
 				continue;
 			}
 			
 			carDAO.deleteCar(removedCar);
-			
-			
-			for (Offer o : offerDAO.readAllOffers()) {
-				if (o.getOfferedCar().equals(vin)) {
-					offerDAO.deleteOffer(o);
-				}
-			}
 			
 			System.out.println("\nCar successfully removed from lot");
 			break;
@@ -182,24 +167,22 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 	}
 
 	@Override
-	public void viewAllOffers() {
+	public void viewAllPendingOffers() {
 		while (true) {
 			System.out.println("\nOFFERS:");
 			
-			List<Offer> pendingOffers = new LinkedList<>();
-			for (Offer o : offerDAO.readAllOffers()) {
-				if (o.getStatus() == Offer.StatusType.PENDING) {
-					Car c = carDAO.readCar(o.getOfferedCar());
-					
-					System.out.printf(o.getOfferer() + ": " + c.getColor() + " " + c.getMake() + " " + c.getModel()
-						+ " " + c.getYear() + " [" + c.getVin() + "] - $%.2f\n", o.getValue());
-					pendingOffers.add(o);
-				}
-			}
+			List<Offer> pendingOffers = offerDAO.readAllPendingOffers();
 			
 			if (pendingOffers.size() == 0) {
 				System.out.println("No offers at the moment :(");
 				break;
+			}
+			
+			for (Offer o : pendingOffers) {
+				Car c = carDAO.readCar(o.getOfferedCar());
+				
+				System.out.printf(o.getOfferer() + ": " + c.getColor() + " " + c.getMake() + " " + c.getModel()
+					+ " " + c.getYear() + " [" + c.getVin() + "] - $%.2f\n", o.getAmount());
 			}
 			
 			System.out.println("\nEnter 1 to ACCEPT offer");
@@ -243,16 +226,19 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 			}
 			
 			offer.setStatus(Offer.StatusType.ACCEPTED);
-			offerDAO.updateOffer(offer);
+			offerDAO.updateOfferStatus(offer);
 
 			Car car = carDAO.readCar(offer.getOfferedCar());
 			car.setStatus(Car.StatusType.SOLD);
-			carDAO.updateCar(car);
+			car.setOwner(offer.getOfferer());
 			
-			for (Offer o : offerDAO.readAllOffers()) {
-				if (o.getOfferedCar().equals(chosenVin) && !o.getOfferer().equals(customerUsername)) {
+			carDAO.updateCarStatus(car);
+			carDAO.updateCarOwner(car);
+			
+			for (Offer o : offerDAO.readAllPendingOffers()) {
+				if (o.getOfferedCar().equals(chosenVin)) {
 					o.setStatus(Offer.StatusType.REJECTED);
-					offerDAO.updateOffer(o);
+					offerDAO.updateOfferStatus(o);
 				}
 			}
 			
@@ -266,7 +252,7 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 			System.out.print("\nEnter the vin number for car you'll reject offer for: ");
 			String chosenVin = sc.nextLine();
 			
-			System.out.println("Enter username of customer whose offer you'll reject: ");
+			System.out.print("Enter username of customer whose offer you'll reject: ");
 			String customerUsername = sc.nextLine();
 			
 			Offer offer = offerDAO.readOfferByUsernameAndVin(customerUsername, chosenVin);
@@ -277,7 +263,7 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 			}
 			
 			offer.setStatus(Offer.StatusType.REJECTED);
-			offerDAO.updateOffer(offer);
+			offerDAO.updateOfferStatus(offer);
 			
 			System.out.println("\nOffer rejected!");
 			break;
@@ -290,31 +276,25 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 		while (true) {
 			System.out.println("\nPAYMENTS:");
 			
-			List<Offer> pendingOffers = new LinkedList<>();
-			
-			for (Offer o : offerDAO.readAllOffers()) {
-				if (o.getStatus() == Offer.StatusType.ACCEPTED) {
-					Car c = carDAO.readCar(o.getOfferedCar());
-					
-					pendingOffers.add(o);
-					System.out.println(o.getOfferer() + ": " + c.getColor() + " " + c.getMake() + " " + c.getModel()
-						+ " " + c.getYear() + " [" + c.getVin() + "]");
-					
-					List<Payment> payments = paymentDAO.readPaymentsByUsernameAndVin(o.getOfferer(), o.getOfferedCar());
-					List<Double> paymentAmounts = new LinkedList<>();
-					
-					for (Payment p : payments) {
-						paymentAmounts.add(p.getAmount());
-					}
-					
-					System.out.printf("Paid so far: $%.2f\n", payCalc.calculatePaidSoFar(paymentAmounts));
-					
-					System.out.printf("Payment left: $%.2f\n", payCalc.calculatePriceLeft(o.getValue(), paymentAmounts));
-					System.out.println();
+			for (Offer o : offerDAO.readAllAcceptedOffers()) {
+				Car c = carDAO.readCar(o.getOfferedCar());
+				
+				System.out.println(o.getOfferer() + ": " + c.getColor() + " " + c.getMake() + " " + c.getModel()
+					+ " " + c.getYear() + " [" + c.getVin() + "]");
+				
+				List<Payment> payments = paymentDAO.readPaymentsByUsernameAndVin(o.getOfferer(), o.getOfferedCar());
+				List<Double> paymentAmounts = new LinkedList<>();
+				
+				for (Payment p : payments) {
+					paymentAmounts.add(p.getAmount());
 				}
+				
+				System.out.printf("Paid so far: $%.2f\n", payCalc.calculatePaidSoFar(paymentAmounts));
+				
+				System.out.printf("Payment left: $%.2f\n", payCalc.calculatePriceLeft(o.getAmount(), paymentAmounts));
 			}
 			
-			if (pendingOffers.size() == 0) {
+			if (offerDAO.readAllAcceptedOffers().size() == 0) {
 				System.out.println("No one bought cars yet :(");
 			}
 			

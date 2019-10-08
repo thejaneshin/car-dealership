@@ -1,36 +1,36 @@
 package com.thejaneshin.service;
 
-import java.util.HashSet;
+import static com.thejaneshin.util.LoggerUtil.error;
+import static com.thejaneshin.util.LoggerUtil.info;
+
 import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Set;
 
 import com.thejaneshin.dao.CarDAO;
-import com.thejaneshin.dao.CarDAOSerialization;
+import com.thejaneshin.dao.CarDAOPostgres;
 import com.thejaneshin.dao.OfferDAO;
-import com.thejaneshin.dao.OfferDAOSerialization;
+import com.thejaneshin.dao.OfferDAOPostgres;
 import com.thejaneshin.dao.PaymentDAO;
-import com.thejaneshin.dao.PaymentDAOSerialization;
+import com.thejaneshin.dao.PaymentDAOPostgres;
 import com.thejaneshin.pojo.Car;
-import com.thejaneshin.pojo.Customer;
 import com.thejaneshin.pojo.Offer;
 import com.thejaneshin.pojo.Payment;
+import com.thejaneshin.pojo.User;
 import com.thejaneshin.util.PaymentCalcImpl;
 import com.thejaneshin.util.PaymentCalculator;
-import static com.thejaneshin.util.LoggerUtil.*;
 
 public class CustomerServiceConsoleImpl implements CustomerService {
 	private static Scanner sc = new Scanner(System.in);
-	private static CarDAO carDAO = new CarDAOSerialization();
-	private static OfferDAO offerDAO = new OfferDAOSerialization();
-	private static PaymentDAO paymentDAO = new PaymentDAOSerialization();
+	private static CarDAO carDAO = new CarDAOPostgres();
+	private static OfferDAO offerDAO = new OfferDAOPostgres();
+	private static PaymentDAO paymentDAO = new PaymentDAOPostgres();
 	private static PaymentCalculator payCalc = new PaymentCalcImpl();
-	private static Customer customer;
+	private static User customer;
 	
 	@Override
-	public void run(Customer currentCustomer) {
+	public void run(User currentCustomer) {
 		customer = currentCustomer;
 		
 		info(customer.getUsername() + " logged in");
@@ -71,13 +71,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 	@Override
 	public void viewLotCars() {
 		while (true) {
-			Set<Car> lotCars = new HashSet<>();
-			
-			for (Car c : carDAO.readAllCars()) {
-				if (c.getStatus() == Car.StatusType.IN_LOT) {
-					lotCars.add(c);
-				}
-			}
+			List<Car> lotCars = carDAO.readAllLotCars();
 			
 			System.out.println("\nCARS ON THE LOT:");
 			
@@ -109,19 +103,13 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 		
 	}
 	
-	private void offerOnCar(Set<Car> lotCars) {
+	private void offerOnCar(List<Car> lotCars) {
 		while (true) {
 			System.out.print("\nEnter the corresponding vin number to offer: ");
 			String chosenVin = sc.nextLine();
 			
-			Car chosenCar = null;
+			Car chosenCar = carDAO.readCar(chosenVin);
 			double offerValue = 0.00;
-			
-			for (Car c : lotCars) {
-				if (chosenVin.equals(c.getVin())) {
-					chosenCar = c;
-				}
-			}
 			
 			if (chosenCar == null) {
 				info("No car with vin " + chosenVin + " in lot");
@@ -135,7 +123,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 				Offer newOffer = offerDAO.readOfferByUsernameAndVin(customer.getUsername(), chosenCar.getVin());
 				
 				if (newOffer != null) {
-					System.out.printf("You've already offered $%.2f\n" + newOffer.getValue());
+					System.out.printf("You've already offered $%.2f\n" + newOffer.getAmount());
 					System.out.println("\nEnter 1 to update your offer");
 					System.out.println("Enter 2 to offer on a different car");
 					
@@ -169,7 +157,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 				// Needs to consume the newline leftover from before
 				sc.nextLine();
 				
-				newOffer = new Offer(offerValue, Offer.StatusType.PENDING, customer.getUsername(), chosenCar.getVin());
+				newOffer = new Offer(offerValue, Offer.StatusType.PENDING, chosenCar.getVin(), customer.getUsername());
 				offerDAO.createOffer(newOffer);
 				
 				System.out.println("\nOffer has been submitted, thank you!");
@@ -192,10 +180,11 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 			}
 			
 			sc.nextLine();
-			offer.setValue(newValue);
+			offer.setAmount(newValue);
+			offerDAO.updateOfferAmount(offer);
 			
 			offer.setStatus(Offer.StatusType.PENDING);
-			offerDAO.updateOffer(offer);
+			offerDAO.updateOfferStatus(offer);
 			
 			System.out.println("\nOffer has been updated, thank you!");
 			break;
@@ -207,18 +196,16 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 	public void viewYourCars() {
 		System.out.println("\nCARS YOU OWN:");
 		
-		List<Offer> acceptedCars = new LinkedList<>();
+		List<Car> yourCars = carDAO.readYourCars(customer.getUsername());
 		
-		for (Offer o : offerDAO.readAllOffers()) {
-			if (o.getOfferer().equals(customer.getUsername()) && o.getStatus().equals(Offer.StatusType.ACCEPTED)) {
-				acceptedCars.add(o);
-				Car c = carDAO.readCar(o.getOfferedCar());
-				System.out.printf(c.getColor() + " " + c.getMake() + " " + c.getModel()
-						+ " " + c.getYear() + " [" + c.getVin() + "] - $%.2f\n", o.getValue());
-			}
+		for (Car c : yourCars) {
+			Offer o = offerDAO.readOfferByUsernameAndVin(customer.getUsername(), c.getVin());
+			
+			System.out.printf(c.getColor() + " " + c.getMake() + " " + c.getModel()
+				+ " " + c.getYear() + " [" + c.getVin() + "] - $%.2f\n", o.getAmount());
 		}
 		
-		if (acceptedCars.size() == 0) {
+		if (yourCars.size() == 0) {
 			System.out.println("None, go buy a car :(");
 		}
 		
@@ -227,7 +214,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 	@Override
 	public void viewOfferedCars() {
 		while (true) {
-			Set<Offer> offeredCars = new HashSet<>();
+			List<Offer> offeredCars = new LinkedList<>();
 			
 			for (Offer o : offerDAO.readAllOffers()) {
 				if (o.getOfferer().equals(customer.getUsername()) && o.getStatus() != Offer.StatusType.ACCEPTED) {
@@ -245,7 +232,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 				for (Offer o : offeredCars) {
 					Car c = carDAO.readCar(o.getOfferedCar());
 					System.out.printf(c.getColor() + " " + c.getMake() + " " + c.getModel()
-						+ " " + c.getYear() + " [" + c.getVin() + "] - $%.2f" + " (" + o.getStatus() + ")\n", o.getValue());
+						+ " " + c.getYear() + " [" + c.getVin() + "] - $%.2f" + " (" + o.getStatus() + ")\n", o.getAmount());
 				}
 			}
 			
@@ -305,13 +292,13 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 		while (true) {
 			List<Offer> myAcceptedOffers = new LinkedList<>();
 			
-			for (Offer o : offerDAO.readAllOffers()) {
-				if (o.getOfferer().equals(customer.getUsername()) && o.getStatus() == Offer.StatusType.ACCEPTED) {
+			System.out.println("\nPAYMENTS:");
+			
+			for (Offer o : offerDAO.readAllOffersByUsername(customer.getUsername())) {
+				if (o.getStatus() == Offer.StatusType.ACCEPTED) {
 					myAcceptedOffers.add(o);
 				}
 			}
-			
-			System.out.println("\nPAYMENTS:");
 			
 			if (myAcceptedOffers.size() == 0) {
 				System.out.println("You don't own any cars");
@@ -330,8 +317,8 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 				System.out.println(c.getColor() + " " + c.getMake() + " " + c.getModel()
 					+ " " + c.getYear() + " [" + c.getVin() + "]");
 				System.out.printf("Paid so far: $%.2f\n", payCalc.calculatePaidSoFar(paymentAmounts));
-				System.out.printf("Payment left: $%.2f\n", payCalc.calculatePriceLeft(mao.getValue(), paymentAmounts));
-				System.out.printf("Monthly Payment: $%.2f\n", payCalc.calculateMonthlyPayment(mao.getValue(), 12));
+				System.out.printf("Payment left: $%.2f\n", payCalc.calculatePriceLeft(mao.getAmount(), paymentAmounts));
+				System.out.printf("Monthly Payment: $%.2f\n", payCalc.calculateMonthlyPayment(mao.getAmount(), 12));
 			}
 		
 			System.out.println("\nEnter 1 to make a payment");
@@ -349,8 +336,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 			else {
 				continue;
 			}
-		}
-		
+		}	
 	}
 	
 	private void makePayment(List<Offer> myAcceptedOffers) {
@@ -358,13 +344,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 			System.out.print("\nEnter the vin number that you'll pay for: ");
 			String chosenVin = sc.nextLine();
 			
-			Offer offer = null;
-			
-			for (Offer o : myAcceptedOffers) {
-				if (o.getOfferedCar().equals(chosenVin)) {
-					offer = o;
-				}
-			}
+			Offer offer = offerDAO.readOfferByUsernameAndVin(customer.getUsername(), chosenVin);
 			
 			if (offer == null) {
 				System.out.println("\nPlease enter a valid vin number");
@@ -379,19 +359,26 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 				paymentAmounts.add(p.getAmount());
 			}
 			
-			double priceToPay = payCalc.calculateMonthlyPayment(offer.getValue(), 12);
+			double priceToPay = payCalc.calculateMonthlyPayment(offer.getAmount(), 12);
 			
-			if (payCalc.calculatePriceLeft(offer.getValue(), paymentAmounts)
+			if (payCalc.calculatePriceLeft(offer.getAmount(), paymentAmounts)
 					< priceToPay) {
-				priceToPay = payCalc.calculatePriceLeft(offer.getValue(), paymentAmounts);
+				priceToPay = payCalc.calculatePriceLeft(offer.getAmount(), paymentAmounts);
 			}
 			
-			if (payCalc.calculatePriceLeft(offer.getValue(), paymentAmounts) > 0.0) {
-				Payment currentPayment = new Payment(priceToPay, customer.getUsername(), offer.getOfferedCar());
+			if (payCalc.calculatePriceLeft(offer.getAmount(), paymentAmounts) > 0.0) {
+				int monthsPaid = paymentDAO.readPaymentsByUsernameAndVin(customer.getUsername(), offer.getOfferedCar()).size();
+				System.out.println(monthsPaid);
+				
+				Payment currentPayment = new Payment(priceToPay, monthsPaid + 1, offer.getOfferedCar(), customer.getUsername());
 				paymentDAO.createPayment(currentPayment);
+				
+				System.out.println("Paid successfully!");
 			}
-			
-			System.out.println("Paid successfully!");
+			else {
+				System.out.println("No more payments needed");
+			}
+	
 			break;
 		}
 		

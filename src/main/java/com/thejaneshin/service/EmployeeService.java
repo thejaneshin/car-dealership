@@ -1,9 +1,9 @@
 package com.thejaneshin.service;
 
-import com.thejaneshin.pojo.Employee;
+import com.thejaneshin.pojo.User;
 
 public interface EmployeeService {
-	public void run(Employee employee);
+	public void run(User employee);
 	
 	public void viewLotCars();
 	
@@ -11,7 +11,7 @@ public interface EmployeeService {
 	
 	public void removeCarFromLot();
 	
-	public void viewAllOffers();
+	public void viewAllPendingOffers();
 	
 	public void viewAllPayments();
 

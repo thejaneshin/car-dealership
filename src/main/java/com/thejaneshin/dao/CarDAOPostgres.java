@@ -61,6 +61,52 @@ public class CarDAOPostgres implements CarDAO {
 	}
 
 	@Override
+	public List<Car> readAllLotCars() {
+		List<Car> cars = new LinkedList<>();
+		String sql = "select * from car where car_status = ?";
+		
+		try {
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setString(1, Car.StatusType.IN_LOT.name());
+			
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				cars.add(new Car(rs.getString(1), rs.getString(2), rs.getString(3),
+						rs.getInt(4), rs.getString(5), Car.StatusType.valueOf(rs.getString(6)), rs.getString(7)));
+			}
+					
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return cars;
+	}
+	
+	@Override
+	public List<Car> readYourCars(String username) {
+		List<Car> cars = new LinkedList<>();
+		String sql = "select * from car where car_owner = ?";
+		
+		try {
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setString(1, username);
+			
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				cars.add(new Car(rs.getString(1), rs.getString(2), rs.getString(3),
+						rs.getInt(4), rs.getString(5), Car.StatusType.valueOf(rs.getString(6)), rs.getString(7)));
+			}
+					
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return cars;
+	}
+	
+	@Override
 	public List<Car> readAllCars() {
 		List<Car> cars = new LinkedList<>();
 		String sql = "select * from car";

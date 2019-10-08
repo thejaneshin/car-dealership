@@ -1,9 +1,9 @@
 package com.thejaneshin.service;
 
-import com.thejaneshin.pojo.Customer;
+import com.thejaneshin.pojo.User;
 
 public interface CustomerService {
-	public void run(Customer currentCustomer);
+	public void run(User currentUser);
 	
 	public void viewLotCars();
 	
