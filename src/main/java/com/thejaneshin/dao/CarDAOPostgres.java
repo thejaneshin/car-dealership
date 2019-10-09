@@ -9,6 +9,7 @@ import java.util.List;
 
 import com.thejaneshin.pojo.Car;
 import com.thejaneshin.util.ConnectionFactory;
+import static com.thejaneshin.util.LoggerUtil.*;
 
 public class CarDAOPostgres implements CarDAO {
 	private Connection conn = ConnectionFactory.getConnection();
@@ -32,8 +33,9 @@ public class CarDAOPostgres implements CarDAO {
 			stmt.setString(6, car.getStatus().name());
 			stmt.setString(7, car.getOwner());
 			stmt.executeUpdate();
+			info("Successsfully created car " + car.getVin());
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 	}
 
@@ -52,9 +54,10 @@ public class CarDAOPostgres implements CarDAO {
 				car = new Car(rs.getString(1), rs.getString(2), rs.getString(3),
 						rs.getInt(4), rs.getString(5), Car.StatusType.valueOf(rs.getString(6)), rs.getString(7));
 			}
-					
+			
+			info("Successfully read car " + vin);
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return car;
@@ -75,16 +78,17 @@ public class CarDAOPostgres implements CarDAO {
 				cars.add(new Car(rs.getString(1), rs.getString(2), rs.getString(3),
 						rs.getInt(4), rs.getString(5), Car.StatusType.valueOf(rs.getString(6)), rs.getString(7)));
 			}
-					
+			
+			info("Successfully read all cars in lot");
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return cars;
 	}
 	
 	@Override
-	public List<Car> readYourCars(String username) {
+	public List<Car> readUserCars(String username) {
 		List<Car> cars = new LinkedList<>();
 		String sql = "select * from car where car_owner = ?";
 		
@@ -98,9 +102,10 @@ public class CarDAOPostgres implements CarDAO {
 				cars.add(new Car(rs.getString(1), rs.getString(2), rs.getString(3),
 						rs.getInt(4), rs.getString(5), Car.StatusType.valueOf(rs.getString(6)), rs.getString(7)));
 			}
-					
+			
+			info("Successfully read cars owned by " + username);
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return cars;
@@ -120,9 +125,10 @@ public class CarDAOPostgres implements CarDAO {
 				cars.add(new Car(rs.getString(1), rs.getString(2), rs.getString(3),
 						rs.getInt(4), rs.getString(5), Car.StatusType.valueOf(rs.getString(6)), rs.getString(7)));
 			}
-					
+			
+			info("Successfully read all cars");		
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return cars;
@@ -137,8 +143,10 @@ public class CarDAOPostgres implements CarDAO {
 			stmt.setString(1, car.getOwner());
 			stmt.setString(2, car.getVin());
 			stmt.executeUpdate();
+			info("Successfully updated car " + car.getVin() + " to owner " 
+					+ car.getOwner());
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 	}
@@ -152,8 +160,10 @@ public class CarDAOPostgres implements CarDAO {
 			stmt.setString(1, car.getStatus().name());
 			stmt.setString(2, car.getVin());
 			stmt.executeUpdate();
+			info("Successfully updated car " + car.getVin() + " to status " 
+					+ car.getStatus());
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 	}
 
@@ -165,8 +175,9 @@ public class CarDAOPostgres implements CarDAO {
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setString(1, car.getVin());
 			stmt.executeUpdate();
+			info("Successfully deleted car " + car.getVin());
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 
 	}

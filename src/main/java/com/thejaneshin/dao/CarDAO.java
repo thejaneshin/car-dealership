@@ -11,7 +11,7 @@ public interface CarDAO {
 	
 	public List<Car> readAllLotCars();
 	
-	public List<Car> readYourCars(String username);
+	public List<Car> readUserCars(String username);
 	
 	public List<Car> readAllCars();
 	

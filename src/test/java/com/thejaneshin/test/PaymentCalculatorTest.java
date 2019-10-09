@@ -35,6 +35,24 @@ public class PaymentCalculatorTest {
 	}
 	
 	@Test
+	public void testCalculateValidPaidSoFar() {
+		List<Double> testPayments = new LinkedList<>();
+		testPayments.add(1000.00);
+		testPayments.add(2000.00);
+		
+		assertEquals(new Double(3000.00), paymentCalc.calculatePaidSoFar(testPayments));
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testCalculateInvalidPaidSoFar() {
+		List<Double> testPayments = new LinkedList<>();
+		testPayments.add(1000.00);
+		testPayments.add(-2000.00);
+		
+		paymentCalc.calculatePaidSoFar(testPayments);
+	}
+	
+	@Test
 	public void testCalculateValidPriceLeft() {
 		List<Double> testPayments = new LinkedList<>();
 		testPayments.add(1000.00);

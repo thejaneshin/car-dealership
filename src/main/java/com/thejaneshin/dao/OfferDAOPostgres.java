@@ -10,6 +10,8 @@ import java.util.List;
 import com.thejaneshin.pojo.Offer;
 import com.thejaneshin.util.ConnectionFactory;
 
+import static com.thejaneshin.util.LoggerUtil.*;
+
 public class OfferDAOPostgres implements OfferDAO {
 	private Connection conn = ConnectionFactory.getConnection();
 	
@@ -29,8 +31,9 @@ public class OfferDAOPostgres implements OfferDAO {
 			stmt.setString(3, o.getOfferedCar());
 			stmt.setString(4, o.getOfferer());
 			stmt.executeUpdate();
+			info("Successfully created offer on car " + o.getOfferedCar() + " by user " + o.getOfferer());
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}	
 	}
 
@@ -51,8 +54,10 @@ public class OfferDAOPostgres implements OfferDAO {
 			while (rs.next()) {
 				offer = new Offer(rs.getDouble(2), Offer.StatusType.valueOf(rs.getString(3)), rs.getString(4), rs.getString(5));
 			}
+			
+			info("Successfully read offer on car " + vin + " by user " + username);
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return offer;
@@ -72,9 +77,10 @@ public class OfferDAOPostgres implements OfferDAO {
 			while (rs.next()) {
 				offers.add(new Offer(rs.getDouble(2), Offer.StatusType.valueOf(rs.getString(3)), rs.getString(4), rs.getString(5)));
 			}
-					
+			
+			info("Successfully read all offers by user " + username);
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return offers;
@@ -94,9 +100,10 @@ public class OfferDAOPostgres implements OfferDAO {
 			while (rs.next()) {
 				offers.add(new Offer(rs.getDouble(2), Offer.StatusType.valueOf(rs.getString(3)), rs.getString(4), rs.getString(5)));
 			}
-					
+			
+			info("Successfully read all pending offers");
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return offers;
@@ -117,8 +124,9 @@ public class OfferDAOPostgres implements OfferDAO {
 				offers.add(new Offer(rs.getDouble(2), Offer.StatusType.valueOf(rs.getString(3)), rs.getString(4), rs.getString(5)));
 			}
 					
+			info("Successfully read all accepted offers");
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return offers;
@@ -138,9 +146,10 @@ public class OfferDAOPostgres implements OfferDAO {
 			while (rs.next()) {
 				offers.add(new Offer(rs.getDouble(2), Offer.StatusType.valueOf(rs.getString(3)), rs.getString(4), rs.getString(5)));
 			}
-					
+			
+			info("Successfully read all offers");		
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return offers;
@@ -156,8 +165,10 @@ public class OfferDAOPostgres implements OfferDAO {
 			stmt.setString(2, o.getOfferedCar());
 			stmt.setString(3, o.getOfferer());
 			stmt.executeUpdate();
+			info("Successfully updated offer on car " + o.getOfferedCar() + " by user " + o.getOfferer()
+					+ " with value of " + o.getAmount());
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 	}
@@ -172,8 +183,10 @@ public class OfferDAOPostgres implements OfferDAO {
 			stmt.setString(2, o.getOfferedCar());
 			stmt.setString(3, o.getOfferer());
 			stmt.executeUpdate();
+			info("Successfully updated offer on car " + o.getOfferedCar() + " by user " + o.getOfferer()
+			+ " to status " + o.getStatus());
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 	}
@@ -187,8 +200,9 @@ public class OfferDAOPostgres implements OfferDAO {
 			stmt.setString(1, o.getOfferedCar());
 			stmt.setString(2, o.getOfferer());
 			stmt.executeUpdate();
+			info("Successfully deleted offer on car " + o.getOfferedCar() + " by user " + o.getOfferer());
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 
 	}

@@ -1,7 +1,6 @@
 package com.thejaneshin.service;
 
-import static com.thejaneshin.util.LoggerUtil.error;
-import static com.thejaneshin.util.LoggerUtil.info;
+import static com.thejaneshin.util.LoggerUtil.*;
 
 import java.util.InputMismatchException;
 import java.util.LinkedList;
@@ -33,7 +32,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 	public void run(User currentCustomer) {
 		customer = currentCustomer;
 		
-		info(customer.getUsername() + " logged in");
+		info("Customer " + customer.getUsername() + " logged in");
 		
 		System.out.println("\nWELCOME, " + customer.getFirstName() +
 				" " + customer.getLastName() + "!");
@@ -71,6 +70,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 	@Override
 	public void viewLotCars() {
 		while (true) {
+			info("Viewing cars in lot");
 			List<Car> lotCars = carDAO.readAllLotCars();
 			
 			System.out.println("\nCARS ON THE LOT:");
@@ -104,6 +104,8 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 	}
 	
 	private void offerOnCar(List<Car> lotCars) {
+		info("Offering on a car");
+		
 		while (true) {
 			System.out.print("\nEnter the corresponding vin number to offer: ");
 			String chosenVin = sc.nextLine();
@@ -112,12 +114,10 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 			double offerValue = 0.00;
 			
 			if (chosenCar == null) {
-				info("No car with vin " + chosenVin + " in lot");
 				System.out.println("No such car in lot, please choose again");
 				continue;
 			}
 			else {
-				// If already offered, then give option to change
 				// Maybe add option to see highest bid available
 				
 				Offer newOffer = offerDAO.readOfferByUsernameAndVin(customer.getUsername(), chosenCar.getVin());
@@ -149,7 +149,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 				} catch (InputMismatchException e) {
 					// Needs to consume the newline leftover from before
 					sc.nextLine();
-					error("Username did not enter valid double");
+					warn("Username did not enter valid double");
 					System.out.println("Please enter a valid price");
 					continue;
 				}
@@ -167,6 +167,8 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 	}
 	
 	private void updateOffer(Offer offer) {
+		info("Updating an offer");
+		
 		while (true) {
 			System.out.print("\nEnter your new offer: ");
 			double newValue = 0.00;
@@ -175,7 +177,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 				newValue = sc.nextDouble();
 			} catch (InputMismatchException e) {
 				sc.nextLine();
-				info("User entered invalid price");
+				warn("User entered invalid price");
 				continue;
 			}
 			
@@ -194,9 +196,11 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 
 	@Override
 	public void viewYourCars() {
+		info("Viewing current customer's cars");
+		
 		System.out.println("\nCARS YOU OWN:");
 		
-		List<Car> yourCars = carDAO.readYourCars(customer.getUsername());
+		List<Car> yourCars = carDAO.readUserCars(customer.getUsername());
 		
 		for (Car c : yourCars) {
 			Offer o = offerDAO.readOfferByUsernameAndVin(customer.getUsername(), c.getVin());
@@ -213,6 +217,8 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 
 	@Override
 	public void viewOfferedCars() {
+		info("Viewing cars that current customer offered on");
+		
 		while (true) {
 			List<Offer> offeredCars = new LinkedList<>();
 			
@@ -243,6 +249,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 			String menuOption = sc.nextLine();
 			
 			if (menuOption.equals("1")) {
+				info("Updating an offer");
 				System.out.print("\nEnter the corresponding vin number to update offer: ");
 				String chosenVin = sc.nextLine();
 				
@@ -257,6 +264,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 				continue;
 			}
 			else if (menuOption.equals("2")) {
+				info("Deleting an offer");
 				System.out.print("\nEnter the corresponding vin number to delete offer: ");
 				String chosenVin = sc.nextLine();
 				
@@ -288,6 +296,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 
 	@Override
 	public void viewRemainingPayments() {
+		info("Viewing remaining payments for current customer");
 		
 		while (true) {
 			List<Offer> myAcceptedOffers = new LinkedList<>();
@@ -319,6 +328,7 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 				System.out.printf("Paid so far: $%.2f\n", payCalc.calculatePaidSoFar(paymentAmounts));
 				System.out.printf("Payment left: $%.2f\n", payCalc.calculatePriceLeft(mao.getAmount(), paymentAmounts));
 				System.out.printf("Monthly Payment: $%.2f\n", payCalc.calculateMonthlyPayment(mao.getAmount(), 12));
+				System.out.println();
 			}
 		
 			System.out.println("\nEnter 1 to make a payment");
@@ -340,6 +350,8 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 	}
 	
 	private void makePayment(List<Offer> myAcceptedOffers) {
+		info("Making payment");
+		
 		while (true) {
 			System.out.print("\nEnter the vin number that you'll pay for: ");
 			String chosenVin = sc.nextLine();
@@ -368,7 +380,6 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 			
 			if (payCalc.calculatePriceLeft(offer.getAmount(), paymentAmounts) > 0.0) {
 				int monthsPaid = paymentDAO.readPaymentsByUsernameAndVin(customer.getUsername(), offer.getOfferedCar()).size();
-				System.out.println(monthsPaid);
 				
 				Payment currentPayment = new Payment(priceToPay, monthsPaid + 1, offer.getOfferedCar(), customer.getUsername());
 				paymentDAO.createPayment(currentPayment);

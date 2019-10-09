@@ -872,3 +872,409 @@
 2019-10-07 20:45:16 INFO  root:25 - Calculating how much customer paid so far
 2019-10-07 20:45:16 INFO  root:25 - Calculating how much more is owed
 2019-10-07 20:45:16 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:10:26 INFO  root:25 - Car application started
+2019-10-07 22:10:26 INFO  root:25 - Login and Register screen
+2019-10-07 22:10:27 INFO  root:25 - Login screen
+2019-10-07 22:10:36 INFO  root:25 - ned is a Customer
+2019-10-07 22:10:38 INFO  root:25 - ned logged in
+2019-10-07 22:11:23 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:11:23 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:11:23 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:11:27 INFO  root:25 - Login and Register screen
+2019-10-07 22:11:28 INFO  root:25 - Login screen
+2019-10-07 22:11:45 INFO  root:25 - emp is an Employee
+2019-10-07 22:12:05 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:12:05 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:12:26 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:12:26 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:12:26 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:12:26 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:13:35 INFO  root:25 - Car application started
+2019-10-07 22:13:35 INFO  root:25 - Login and Register screen
+2019-10-07 22:13:42 INFO  root:25 - Login screen
+2019-10-07 22:13:47 INFO  root:25 - emp is an Employee
+2019-10-07 22:13:54 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:13:54 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:13:54 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:13:54 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:14:04 INFO  root:25 - Login and Register screen
+2019-10-07 22:14:05 INFO  root:25 - Login screen
+2019-10-07 22:14:09 INFO  root:25 - ned is a Customer
+2019-10-07 22:14:11 INFO  root:25 - ned logged in
+2019-10-07 22:14:29 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:14:29 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:14:29 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:14:29 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:14:29 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:14:29 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:14:41 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:14:41 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:14:41 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:14:41 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:14:41 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:14:41 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:14:42 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:14:42 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:14:42 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:14:56 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:14:56 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:14:56 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:14:56 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:14:56 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:14:56 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:15:00 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:15:00 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:15:00 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:15:01 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:15:01 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:15:01 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:15:01 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:15:01 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:15:01 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:37:39 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:37:48 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:37:59 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:37:59 ERROR root:13 - Payment is 0 or negative
+2019-10-07 22:38:53 INFO  root:25 - Calculating how much more is owed
+2019-10-07 22:38:53 ERROR root:13 - Payment is 0 or negative
+2019-10-07 22:39:26 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:39:30 INFO  root:25 - Calculating monthly payment
+2019-10-07 22:39:30 ERROR root:13 - Price and/or months are invalid
+2019-10-07 22:42:57 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:43:43 INFO  root:25 - Calculating how much customer paid so far
+2019-10-07 22:43:43 ERROR root:13 - Payment is negative
+2019-10-08 10:12:59 INFO  root:25 - Properties file loaded
+2019-10-08 10:13:01 INFO  root:25 - Created connection
+2019-10-08 10:13:02 INFO  root:25 - Created connection
+2019-10-08 10:13:03 INFO  root:25 - Created connection
+2019-10-08 10:13:04 INFO  root:25 - Created connection
+2019-10-08 10:13:05 INFO  root:25 - Created connection
+2019-10-08 10:13:06 INFO  root:25 - Created connection
+2019-10-08 10:13:07 INFO  root:25 - Created connection
+2019-10-08 10:13:07 INFO  root:25 - Created connection
+2019-10-08 10:13:08 INFO  root:25 - Created connection
+2019-10-08 10:13:09 INFO  root:25 - Created connection
+2019-10-08 19:24:31 INFO  root:25 - Properties file loaded
+2019-10-08 19:24:34 INFO  root:25 - Created connection
+2019-10-08 19:24:34 INFO  root:25 - Created connection
+2019-10-08 19:24:35 INFO  root:25 - Created connection
+2019-10-08 19:24:36 INFO  root:25 - Created connection
+2019-10-08 19:24:36 INFO  root:25 - Created connection
+2019-10-08 19:24:37 INFO  root:25 - Created connection
+2019-10-08 19:24:37 INFO  root:25 - Created connection
+2019-10-08 19:24:38 INFO  root:25 - Created connection
+2019-10-08 19:24:39 INFO  root:25 - Created connection
+2019-10-08 19:24:39 INFO  root:25 - Successsfully created car JHMCM56643C004323
+2019-10-08 19:24:40 INFO  root:25 - Created connection
+2019-10-08 19:25:23 INFO  root:25 - Properties file loaded
+2019-10-08 19:25:25 INFO  root:25 - Created connection
+2019-10-08 19:25:26 INFO  root:25 - Created connection
+2019-10-08 19:25:27 INFO  root:25 - Created connection
+2019-10-08 19:25:27 INFO  root:25 - Created connection
+2019-10-08 19:25:28 INFO  root:25 - Created connection
+2019-10-08 19:25:28 INFO  root:25 - Created connection
+2019-10-08 19:25:29 INFO  root:25 - Created connection
+2019-10-08 19:25:30 INFO  root:25 - Created connection
+2019-10-08 19:25:30 INFO  root:25 - Created connection
+2019-10-08 19:25:31 ERROR root:13 - ERROR: duplicate key value violates unique constraint "car_pkey"
+  Detail: Key (vin)=(JHMCM56643C004323) already exists.
+2019-10-08 19:29:50 INFO  root:25 - Properties file loaded
+2019-10-08 19:29:52 INFO  root:25 - Created connection
+2019-10-08 19:29:52 INFO  root:25 - Created connection
+2019-10-08 19:29:53 INFO  root:25 - Created connection
+2019-10-08 19:29:54 INFO  root:25 - Created connection
+2019-10-08 19:29:54 INFO  root:25 - Created connection
+2019-10-08 19:29:55 INFO  root:25 - Created connection
+2019-10-08 19:29:56 INFO  root:25 - Created connection
+2019-10-08 19:29:56 INFO  root:25 - Created connection
+2019-10-08 19:29:57 INFO  root:25 - Created connection
+2019-10-08 19:29:57 ERROR root:13 - ERROR: duplicate key value violates unique constraint "car_pkey"
+  Detail: Key (vin)=(JHMCM56643C004323) already exists.
+2019-10-08 19:33:34 INFO  root:25 - Properties file loaded
+2019-10-08 19:33:37 INFO  root:25 - Created connection
+2019-10-08 19:33:38 INFO  root:25 - Created connection
+2019-10-08 19:33:39 INFO  root:25 - Created connection
+2019-10-08 19:33:39 INFO  root:25 - Created connection
+2019-10-08 19:33:40 INFO  root:25 - Created connection
+2019-10-08 19:33:40 INFO  root:25 - Created connection
+2019-10-08 19:33:41 INFO  root:25 - Created connection
+2019-10-08 19:33:42 INFO  root:25 - Created connection
+2019-10-08 19:33:42 INFO  root:25 - Created connection
+2019-10-08 19:34:30 INFO  root:25 - Properties file loaded
+2019-10-08 19:34:31 INFO  root:25 - Created connection
+2019-10-08 19:34:32 INFO  root:25 - Created connection
+2019-10-08 19:34:33 INFO  root:25 - Created connection
+2019-10-08 19:34:33 INFO  root:25 - Created connection
+2019-10-08 19:34:34 INFO  root:25 - Created connection
+2019-10-08 19:34:35 INFO  root:25 - Created connection
+2019-10-08 19:34:35 INFO  root:25 - Created connection
+2019-10-08 19:34:36 INFO  root:25 - Created connection
+2019-10-08 19:34:36 INFO  root:25 - Created connection
+2019-10-08 19:34:37 INFO  root:25 - Successfully read car JHMCM56643C004323
+2019-10-08 19:35:11 INFO  root:25 - Properties file loaded
+2019-10-08 19:35:14 INFO  root:25 - Created connection
+2019-10-08 19:35:14 INFO  root:25 - Created connection
+2019-10-08 19:35:15 INFO  root:25 - Created connection
+2019-10-08 19:35:15 INFO  root:25 - Created connection
+2019-10-08 19:35:16 INFO  root:25 - Created connection
+2019-10-08 19:35:17 INFO  root:25 - Created connection
+2019-10-08 19:35:17 INFO  root:25 - Created connection
+2019-10-08 19:35:18 INFO  root:25 - Created connection
+2019-10-08 19:35:19 INFO  root:25 - Created connection
+2019-10-08 19:35:19 INFO  root:25 - Successfully read car JHMCM56643C004323
+2019-10-08 19:37:44 INFO  root:25 - Properties file loaded
+2019-10-08 19:37:47 INFO  root:25 - Created connection
+2019-10-08 19:37:48 INFO  root:25 - Created connection
+2019-10-08 19:37:49 INFO  root:25 - Created connection
+2019-10-08 19:37:49 INFO  root:25 - Created connection
+2019-10-08 19:37:50 INFO  root:25 - Created connection
+2019-10-08 19:37:51 INFO  root:25 - Created connection
+2019-10-08 19:37:51 INFO  root:25 - Created connection
+2019-10-08 19:37:52 INFO  root:25 - Created connection
+2019-10-08 19:37:52 INFO  root:25 - Created connection
+2019-10-08 19:37:53 INFO  root:25 - Successfully read all cars in lot
+2019-10-08 19:39:45 INFO  root:25 - Properties file loaded
+2019-10-08 19:39:47 INFO  root:25 - Created connection
+2019-10-08 19:39:48 INFO  root:25 - Created connection
+2019-10-08 19:39:49 INFO  root:25 - Created connection
+2019-10-08 19:39:49 INFO  root:25 - Created connection
+2019-10-08 19:39:50 INFO  root:25 - Created connection
+2019-10-08 19:39:51 INFO  root:25 - Created connection
+2019-10-08 19:39:51 INFO  root:25 - Created connection
+2019-10-08 19:39:52 INFO  root:25 - Created connection
+2019-10-08 19:39:53 INFO  root:25 - Created connection
+2019-10-08 19:39:53 INFO  root:25 - Successfully read cars owned by null
+2019-10-08 19:41:50 INFO  root:25 - Properties file loaded
+2019-10-08 19:41:52 INFO  root:25 - Created connection
+2019-10-08 19:41:52 INFO  root:25 - Created connection
+2019-10-08 19:41:53 INFO  root:25 - Created connection
+2019-10-08 19:41:54 INFO  root:25 - Created connection
+2019-10-08 19:41:54 INFO  root:25 - Created connection
+2019-10-08 19:41:55 INFO  root:25 - Created connection
+2019-10-08 19:41:56 INFO  root:25 - Created connection
+2019-10-08 19:41:57 INFO  root:25 - Created connection
+2019-10-08 19:41:57 INFO  root:25 - Created connection
+2019-10-08 19:41:57 INFO  root:25 - Successfully read all cars
+2019-10-08 19:46:46 INFO  root:25 - Properties file loaded
+2019-10-08 19:46:48 INFO  root:25 - Created connection
+2019-10-08 19:46:49 INFO  root:25 - Created connection
+2019-10-08 19:46:49 INFO  root:25 - Created connection
+2019-10-08 19:46:50 INFO  root:25 - Created connection
+2019-10-08 19:46:51 INFO  root:25 - Created connection
+2019-10-08 19:46:51 INFO  root:25 - Created connection
+2019-10-08 19:46:52 INFO  root:25 - Created connection
+2019-10-08 19:46:53 INFO  root:25 - Created connection
+2019-10-08 19:46:53 INFO  root:25 - Created connection
+2019-10-08 19:46:54 INFO  root:25 - Successfully updated car JHMCM56643C004323 to owner null
+2019-10-08 19:48:16 INFO  root:25 - Properties file loaded
+2019-10-08 19:48:18 INFO  root:25 - Created connection
+2019-10-08 19:48:19 INFO  root:25 - Created connection
+2019-10-08 19:48:20 INFO  root:25 - Created connection
+2019-10-08 19:48:20 INFO  root:25 - Created connection
+2019-10-08 19:48:21 INFO  root:25 - Created connection
+2019-10-08 19:48:22 INFO  root:25 - Created connection
+2019-10-08 19:48:22 INFO  root:25 - Created connection
+2019-10-08 19:48:23 INFO  root:25 - Created connection
+2019-10-08 19:48:24 INFO  root:25 - Created connection
+2019-10-08 19:48:24 INFO  root:25 - Successfully updated car JHMCM56643C004323 to status IN_LOT
+2019-10-08 19:50:02 INFO  root:25 - Properties file loaded
+2019-10-08 19:50:05 INFO  root:25 - Created connection
+2019-10-08 19:50:05 INFO  root:25 - Created connection
+2019-10-08 19:50:06 INFO  root:25 - Created connection
+2019-10-08 19:50:07 INFO  root:25 - Created connection
+2019-10-08 19:50:07 INFO  root:25 - Created connection
+2019-10-08 19:50:08 INFO  root:25 - Created connection
+2019-10-08 19:50:08 INFO  root:25 - Created connection
+2019-10-08 19:50:09 INFO  root:25 - Created connection
+2019-10-08 19:50:10 INFO  root:25 - Created connection
+2019-10-08 19:50:10 INFO  root:25 - Successfully deleted car JHMCM56643C004323
+2019-10-08 20:13:46 INFO  root:25 - Properties file loaded
+2019-10-08 20:13:48 INFO  root:25 - Created connection
+2019-10-08 20:13:49 INFO  root:25 - Created connection
+2019-10-08 20:13:50 INFO  root:25 - Created connection
+2019-10-08 20:13:50 INFO  root:25 - Created connection
+2019-10-08 20:13:51 INFO  root:25 - Created connection
+2019-10-08 20:13:52 INFO  root:25 - Created connection
+2019-10-08 20:13:52 INFO  root:25 - Created connection
+2019-10-08 20:13:53 INFO  root:25 - Created connection
+2019-10-08 20:13:54 INFO  root:25 - Created connection
+2019-10-08 20:13:54 INFO  root:25 - Created connection
+2019-10-08 20:17:29 INFO  root:25 - Properties file loaded
+2019-10-08 20:17:31 INFO  root:25 - Created connection
+2019-10-08 20:17:32 INFO  root:25 - Created connection
+2019-10-08 20:17:32 INFO  root:25 - Created connection
+2019-10-08 20:17:33 INFO  root:25 - Created connection
+2019-10-08 20:17:34 INFO  root:25 - Created connection
+2019-10-08 20:17:34 INFO  root:25 - Created connection
+2019-10-08 20:17:35 INFO  root:25 - Created connection
+2019-10-08 20:17:36 INFO  root:25 - Created connection
+2019-10-08 20:17:36 INFO  root:25 - Created connection
+2019-10-08 20:17:37 INFO  root:25 - Created connection
+2019-10-08 20:21:52 INFO  root:25 - Properties file loaded
+2019-10-08 20:21:55 INFO  root:25 - Created connection
+2019-10-08 20:21:56 INFO  root:25 - Created connection
+2019-10-08 20:21:56 INFO  root:25 - Created connection
+2019-10-08 20:21:57 INFO  root:25 - Created connection
+2019-10-08 20:21:58 INFO  root:25 - Created connection
+2019-10-08 20:21:58 INFO  root:25 - Created connection
+2019-10-08 20:21:59 INFO  root:25 - Created connection
+2019-10-08 20:22:00 INFO  root:25 - Created connection
+2019-10-08 20:22:01 INFO  root:25 - Created connection
+2019-10-08 20:22:01 INFO  root:25 - Created connection
+2019-10-08 20:23:21 INFO  root:25 - Properties file loaded
+2019-10-08 20:23:24 INFO  root:25 - Created connection
+2019-10-08 20:23:25 INFO  root:25 - Created connection
+2019-10-08 20:23:26 INFO  root:25 - Created connection
+2019-10-08 20:23:26 INFO  root:25 - Created connection
+2019-10-08 20:23:27 INFO  root:25 - Created connection
+2019-10-08 20:23:28 INFO  root:25 - Created connection
+2019-10-08 20:23:28 INFO  root:25 - Created connection
+2019-10-08 20:23:29 INFO  root:25 - Created connection
+2019-10-08 20:23:30 INFO  root:25 - Created connection
+2019-10-08 20:23:30 INFO  root:25 - Created connection
+2019-10-08 20:23:30 ERROR root:13 - ERROR: insert or update on table "offer" violates foreign key constraint "offer_offered_car_fkey"
+  Detail: Key (offered_car)=(JHMCM56643C004323) is not present in table "car".
+2019-10-08 20:26:29 INFO  root:25 - Properties file loaded
+2019-10-08 20:26:31 INFO  root:25 - Created connection
+2019-10-08 20:26:31 INFO  root:25 - Created connection
+2019-10-08 20:26:32 INFO  root:25 - Created connection
+2019-10-08 20:26:33 INFO  root:25 - Created connection
+2019-10-08 20:26:33 INFO  root:25 - Created connection
+2019-10-08 20:26:34 INFO  root:25 - Created connection
+2019-10-08 20:26:35 INFO  root:25 - Created connection
+2019-10-08 20:26:35 INFO  root:25 - Created connection
+2019-10-08 20:26:36 INFO  root:25 - Created connection
+2019-10-08 20:26:37 INFO  root:25 - Created connection
+2019-10-08 20:27:42 INFO  root:25 - Properties file loaded
+2019-10-08 20:27:44 INFO  root:25 - Created connection
+2019-10-08 20:27:44 INFO  root:25 - Created connection
+2019-10-08 20:27:45 INFO  root:25 - Created connection
+2019-10-08 20:27:46 INFO  root:25 - Created connection
+2019-10-08 20:27:46 INFO  root:25 - Created connection
+2019-10-08 20:27:47 INFO  root:25 - Created connection
+2019-10-08 20:27:47 INFO  root:25 - Created connection
+2019-10-08 20:27:48 INFO  root:25 - Created connection
+2019-10-08 20:27:49 INFO  root:25 - Created connection
+2019-10-08 20:27:49 INFO  root:25 - Created connection
+2019-10-08 20:27:50 INFO  root:25 - Successfully read offer on car JHMCM56643C004323 by user ned
+2019-10-08 20:29:33 INFO  root:25 - Properties file loaded
+2019-10-08 20:29:35 INFO  root:25 - Created connection
+2019-10-08 20:29:36 INFO  root:25 - Created connection
+2019-10-08 20:29:36 INFO  root:25 - Created connection
+2019-10-08 20:29:37 INFO  root:25 - Created connection
+2019-10-08 20:29:38 INFO  root:25 - Created connection
+2019-10-08 20:29:38 INFO  root:25 - Created connection
+2019-10-08 20:29:39 INFO  root:25 - Created connection
+2019-10-08 20:29:40 INFO  root:25 - Created connection
+2019-10-08 20:29:40 INFO  root:25 - Created connection
+2019-10-08 20:29:41 INFO  root:25 - Created connection
+2019-10-08 20:29:41 INFO  root:25 - Successfully read all offers by user ned
+2019-10-08 20:31:56 INFO  root:25 - Properties file loaded
+2019-10-08 20:32:00 INFO  root:25 - Created connection
+2019-10-08 20:32:00 INFO  root:25 - Created connection
+2019-10-08 20:32:01 INFO  root:25 - Created connection
+2019-10-08 20:32:01 INFO  root:25 - Created connection
+2019-10-08 20:32:02 INFO  root:25 - Created connection
+2019-10-08 20:32:03 INFO  root:25 - Created connection
+2019-10-08 20:32:03 INFO  root:25 - Created connection
+2019-10-08 20:32:04 INFO  root:25 - Created connection
+2019-10-08 20:32:05 INFO  root:25 - Created connection
+2019-10-08 20:32:05 INFO  root:25 - Created connection
+2019-10-08 20:32:05 INFO  root:25 - Successfully read all pending offers
+2019-10-08 20:33:37 INFO  root:25 - Properties file loaded
+2019-10-08 20:33:40 INFO  root:25 - Created connection
+2019-10-08 20:33:41 INFO  root:25 - Created connection
+2019-10-08 20:33:42 INFO  root:25 - Created connection
+2019-10-08 20:33:42 INFO  root:25 - Created connection
+2019-10-08 20:33:43 INFO  root:25 - Created connection
+2019-10-08 20:33:44 INFO  root:25 - Created connection
+2019-10-08 20:33:44 INFO  root:25 - Created connection
+2019-10-08 20:33:45 INFO  root:25 - Created connection
+2019-10-08 20:33:46 INFO  root:25 - Created connection
+2019-10-08 20:33:46 INFO  root:25 - Created connection
+2019-10-08 20:33:47 INFO  root:25 - Successfully read all accepted offers
+2019-10-08 20:34:45 INFO  root:25 - Properties file loaded
+2019-10-08 20:34:47 INFO  root:25 - Created connection
+2019-10-08 20:34:47 INFO  root:25 - Created connection
+2019-10-08 20:34:48 INFO  root:25 - Created connection
+2019-10-08 20:34:49 INFO  root:25 - Created connection
+2019-10-08 20:34:49 INFO  root:25 - Created connection
+2019-10-08 20:34:50 INFO  root:25 - Created connection
+2019-10-08 20:34:51 INFO  root:25 - Created connection
+2019-10-08 20:34:51 INFO  root:25 - Created connection
+2019-10-08 20:34:52 INFO  root:25 - Created connection
+2019-10-08 20:34:53 INFO  root:25 - Created connection
+2019-10-08 20:34:53 INFO  root:25 - Successfully read all offers
+2019-10-08 20:36:36 INFO  root:25 - Properties file loaded
+2019-10-08 20:36:38 INFO  root:25 - Created connection
+2019-10-08 20:36:38 INFO  root:25 - Created connection
+2019-10-08 20:36:39 INFO  root:25 - Created connection
+2019-10-08 20:36:40 INFO  root:25 - Created connection
+2019-10-08 20:36:40 INFO  root:25 - Created connection
+2019-10-08 20:36:41 INFO  root:25 - Created connection
+2019-10-08 20:36:41 INFO  root:25 - Created connection
+2019-10-08 20:36:42 INFO  root:25 - Created connection
+2019-10-08 20:36:43 INFO  root:25 - Created connection
+2019-10-08 20:36:43 INFO  root:25 - Created connection
+2019-10-08 20:36:44 INFO  root:25 - Successfully updated offer on car JHMCM56643C004323 by user ned with value of 80000.0
+2019-10-08 20:38:09 INFO  root:25 - Properties file loaded
+2019-10-08 20:38:11 INFO  root:25 - Created connection
+2019-10-08 20:38:12 INFO  root:25 - Created connection
+2019-10-08 20:38:12 INFO  root:25 - Created connection
+2019-10-08 20:38:13 INFO  root:25 - Created connection
+2019-10-08 20:38:14 INFO  root:25 - Created connection
+2019-10-08 20:38:14 INFO  root:25 - Created connection
+2019-10-08 20:38:15 INFO  root:25 - Created connection
+2019-10-08 20:38:16 INFO  root:25 - Created connection
+2019-10-08 20:38:16 INFO  root:25 - Created connection
+2019-10-08 20:38:17 INFO  root:25 - Created connection
+2019-10-08 20:38:17 INFO  root:25 - Successfully updated offer on car JHMCM56643C004323 by user ned to status PENDING
+2019-10-08 20:39:19 INFO  root:25 - Properties file loaded
+2019-10-08 20:39:21 INFO  root:25 - Created connection
+2019-10-08 20:39:22 INFO  root:25 - Created connection
+2019-10-08 20:39:23 INFO  root:25 - Created connection
+2019-10-08 20:39:23 INFO  root:25 - Created connection
+2019-10-08 20:39:24 INFO  root:25 - Created connection
+2019-10-08 20:39:25 INFO  root:25 - Created connection
+2019-10-08 20:39:25 INFO  root:25 - Created connection
+2019-10-08 20:39:26 INFO  root:25 - Created connection
+2019-10-08 20:39:26 INFO  root:25 - Created connection
+2019-10-08 20:39:27 INFO  root:25 - Created connection
+2019-10-08 20:39:27 INFO  root:25 - Successfully deleted offer on car JHMCM56643C004323 by user ned
+2019-10-08 20:50:04 INFO  root:25 - Properties file loaded
+2019-10-08 20:50:07 INFO  root:25 - Created connection
+2019-10-08 20:50:07 INFO  root:25 - Created connection
+2019-10-08 20:50:08 INFO  root:25 - Created connection
+2019-10-08 20:50:08 INFO  root:25 - Created connection
+2019-10-08 20:50:09 ERROR root:13 - ERROR: insert or update on table "payment" violates foreign key constraint "payment_paid_car_fkey"
+  Detail: Key (paid_car)=(seruslhkjdf) is not present in table "car".
+2019-10-08 20:53:03 INFO  root:25 - Properties file loaded
+2019-10-08 20:53:06 INFO  root:25 - Created connection
+2019-10-08 20:53:07 INFO  root:25 - Created connection
+2019-10-08 20:53:08 INFO  root:25 - Created connection
+2019-10-08 20:53:08 INFO  root:25 - Created connection
+2019-10-08 20:53:09 INFO  root:25 - Successfully read all payments on car seruslhkjdf by user payer
+2019-10-08 20:54:09 INFO  root:25 - Properties file loaded
+2019-10-08 20:54:11 INFO  root:25 - Created connection
+2019-10-08 20:54:12 INFO  root:25 - Created connection
+2019-10-08 20:54:13 INFO  root:25 - Created connection
+2019-10-08 20:54:13 INFO  root:25 - Created connection
+2019-10-08 20:54:14 INFO  root:25 - Successfully read all payments
+2019-10-08 21:10:38 INFO  root:25 - Properties file loaded
+2019-10-08 21:10:40 INFO  root:25 - Created connection
+2019-10-08 21:10:41 INFO  root:25 - Created connection
+2019-10-08 21:10:41 INFO  root:25 - Created connection
+2019-10-08 21:10:42 INFO  root:25 - Created connection
+2019-10-08 21:10:42 INFO  root:25 - Successfully created user with username lily with role CUSTOMER
+2019-10-08 21:12:48 INFO  root:25 - Properties file loaded
+2019-10-08 21:12:50 INFO  root:25 - Created connection
+2019-10-08 21:12:51 INFO  root:25 - Created connection
+2019-10-08 21:12:51 INFO  root:25 - Created connection
+2019-10-08 21:12:52 INFO  root:25 - Created connection
+2019-10-08 21:12:52 INFO  root:25 - Successfully read user with username lily
+2019-10-08 21:13:45 INFO  root:25 - Properties file loaded
+2019-10-08 21:13:47 INFO  root:25 - Created connection
+2019-10-08 21:13:47 INFO  root:25 - Created connection
+2019-10-08 21:13:48 INFO  root:25 - Created connection
+2019-10-08 21:13:48 INFO  root:25 - Created connection
+2019-10-08 21:13:49 INFO  root:25 - Successfully read all users

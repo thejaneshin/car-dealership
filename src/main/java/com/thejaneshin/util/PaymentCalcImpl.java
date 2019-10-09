@@ -13,6 +13,7 @@ public class PaymentCalcImpl implements PaymentCalculator {
 		for (Double d : payments) {
 			if (d <= 0.0) {
 				error("Payment is negative");
+				throw new IllegalArgumentException();
 			}
 			totalPaid += d;
 		}
@@ -28,11 +29,13 @@ public class PaymentCalcImpl implements PaymentCalculator {
 		
 		if (price < 0) {
 			error("Price is negative");
+			throw new IllegalArgumentException();
 		}
 		
 		for (Double d : payments) {
 			if (d <= 0.0) {
 				error("Payment is 0 or negative");
+				throw new IllegalArgumentException();
 			}
 			totalPaid += d;
 		}
@@ -46,6 +49,7 @@ public class PaymentCalcImpl implements PaymentCalculator {
 		
 		if (price < 0 || months <= 0) {
 			error("Price and/or months are invalid");
+			throw new IllegalArgumentException();
 		}
 		return price / months;
 	}

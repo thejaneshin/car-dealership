@@ -9,6 +9,7 @@ import java.util.List;
 
 import com.thejaneshin.pojo.Payment;
 import com.thejaneshin.util.ConnectionFactory;
+import static com.thejaneshin.util.LoggerUtil.*;
 
 public class PaymentDAOPostgres implements PaymentDAO {
 	private Connection conn = ConnectionFactory.getConnection();
@@ -29,8 +30,10 @@ public class PaymentDAOPostgres implements PaymentDAO {
 			stmt.setString(3, p.getPaidCar());
 			stmt.setString(4, p.getPayer());
 			stmt.executeUpdate();
+			info("Successfully created payment on car " + p.getPaidCar() + " by user " + p.getPayer()
+					+ " on month " + p.getPaidMonth());
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 
 	}
@@ -50,9 +53,10 @@ public class PaymentDAOPostgres implements PaymentDAO {
 			while (rs.next()) {
 				payments.add(new Payment(rs.getDouble(2), rs.getInt(3), rs.getString(4), rs.getString(5)));
 			}
-					
+			
+			info("Successfully read all payments on car " + vin + " by user " + username);
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return payments;
@@ -71,9 +75,10 @@ public class PaymentDAOPostgres implements PaymentDAO {
 			while (rs.next()) {
 				payments.add(new Payment(rs.getDouble(2), rs.getInt(3), rs.getString(4), rs.getString(5)));
 			}
-					
+			
+			info("Successfully read all payments");		
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return payments;

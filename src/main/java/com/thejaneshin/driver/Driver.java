@@ -49,8 +49,6 @@ public class Driver {
 	public static String loginOrRegisterScreen() {
 		String lOrR = "";
 		
-		info("Login and Register screen");
-		
 		do {
 			System.out.println("\nEnter l to Login");
 			System.out.println("Enter r to Register");

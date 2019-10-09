@@ -1,6 +1,6 @@
 package com.thejaneshin.service;
 
-import static com.thejaneshin.util.LoggerUtil.warn;
+import static com.thejaneshin.util.LoggerUtil.*;
 
 import java.util.InputMismatchException;
 import java.util.LinkedList;
@@ -31,6 +31,8 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 	@Override
 	public void run(User currentEmployee) {
 		employee = currentEmployee;
+		
+		info("Employee " + employee.getUsername() + " logged in");
 		
 		System.out.println("\nWELCOME, " + employee.getFirstName() +
 				" " + employee.getLastName() + "!");
@@ -69,6 +71,7 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 
 	@Override
 	public void viewLotCars() {
+		info("Viewing all cars in lot");
 		List<Car> lotCars = carDAO.readAllLotCars();
 		
 		System.out.println("\nCARS ON THE LOT:");
@@ -85,6 +88,8 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 
 	@Override
 	public void addCarToLot() {
+		info("Adding a car to lot");
+		
 		while (true) {
 			System.out.print("\nEnter the vin number: ");
 			String vin = sc.nextLine();
@@ -142,6 +147,8 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 
 	@Override
 	public void removeCarFromLot() {
+		info("Removing car from lot");
+		
 		while (true) {
 			System.out.print("\nEnter the vin number to remove from lot: ");
 			String vin = sc.nextLine();
@@ -168,6 +175,8 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 
 	@Override
 	public void viewAllPendingOffers() {
+		info("Viewing all pending offers");
+		
 		while (true) {
 			System.out.println("\nOFFERS:");
 			
@@ -211,6 +220,8 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 	}
 
 	private void acceptOffer() {
+		info("Accepting an offer");
+		
 		while (true) {
 			System.out.print("\nEnter the vin number for car you'll accept offer for: ");
 			String chosenVin = sc.nextLine();
@@ -248,6 +259,8 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 	}
 	
 	private void rejectOffer() {
+		info("Rejecting an offer");
+		
 		while (true) {
 			System.out.print("\nEnter the vin number for car you'll reject offer for: ");
 			String chosenVin = sc.nextLine();
@@ -273,6 +286,8 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 	
 	@Override
 	public void viewAllPayments() {
+		info("Viewing all payments");
+		
 		while (true) {
 			System.out.println("\nPAYMENTS:");
 			
@@ -292,6 +307,7 @@ public class EmployeeServiceConsoleImpl implements EmployeeService {
 				System.out.printf("Paid so far: $%.2f\n", payCalc.calculatePaidSoFar(paymentAmounts));
 				
 				System.out.printf("Payment left: $%.2f\n", payCalc.calculatePriceLeft(o.getAmount(), paymentAmounts));
+				System.out.println();
 			}
 			
 			if (offerDAO.readAllAcceptedOffers().size() == 0) {

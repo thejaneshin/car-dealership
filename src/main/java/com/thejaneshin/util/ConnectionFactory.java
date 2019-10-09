@@ -8,6 +8,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
+import static com.thejaneshin.util.LoggerUtil.*;
+
 public class ConnectionFactory {
 	private static String url;
 	
@@ -35,10 +37,11 @@ public class ConnectionFactory {
 			url = prop.getProperty("url");
 			user = prop.getProperty("user");
 			password = prop.getProperty("password");
+			info("Properties file loaded");
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			error("Properties file not found");
 		} catch (IOException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		} 
 	}
 	
@@ -47,9 +50,9 @@ public class ConnectionFactory {
 		
 		try {
 			conn = DriverManager.getConnection(url, user, password);
+			info("Created connection");
 		} catch(SQLException e) {
-			System.out.println("Failed to create connection");
-			e.printStackTrace();
+			error("Failed to create connection");
 		}
 		
 		return conn;

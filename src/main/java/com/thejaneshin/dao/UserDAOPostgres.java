@@ -9,6 +9,7 @@ import java.util.List;
 
 import com.thejaneshin.pojo.User;
 import com.thejaneshin.util.ConnectionFactory;
+import static com.thejaneshin.util.LoggerUtil.*;
 
 public class UserDAOPostgres implements UserDAO {
 	private Connection conn = ConnectionFactory.getConnection();
@@ -30,8 +31,10 @@ public class UserDAOPostgres implements UserDAO {
 			stmt.setString(4, user.getLastName());
 			stmt.setString(5, user.getRole().name());
 			stmt.executeUpdate();
+			info("Successfully created user with username " + user.getUsername()
+					+ " with role " + user.getRole());
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 
 	}
@@ -52,9 +55,9 @@ public class UserDAOPostgres implements UserDAO {
 				user = new User(rs.getString(1), rs.getString(2), rs.getString(3),
 						rs.getString(4), User.RoleType.valueOf(rs.getString(5)));
 			}
-					
+			info("Successfully read user with username " + username);		
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return user;
@@ -74,9 +77,10 @@ public class UserDAOPostgres implements UserDAO {
 				users.add(new User(rs.getString(1), rs.getString(2), rs.getString(3),
 						rs.getString(4), User.RoleType.valueOf(rs.getString(5))));
 			}
-					
+			
+			info("Successfully read all users");
 		} catch (SQLException e) {
-			e.printStackTrace();
+			error(e.getMessage());
 		}
 		
 		return users;
