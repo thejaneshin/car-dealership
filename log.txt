@@ -1278,3 +1278,437 @@
 2019-10-08 21:13:48 INFO  root:25 - Created connection
 2019-10-08 21:13:48 INFO  root:25 - Created connection
 2019-10-08 21:13:49 INFO  root:25 - Successfully read all users
+2019-10-09 08:28:24 INFO  root:25 - Properties file loaded
+2019-10-09 08:28:26 INFO  root:25 - Created connection
+2019-10-09 08:28:27 INFO  root:25 - Created connection
+2019-10-09 08:28:27 INFO  root:25 - Created connection
+2019-10-09 08:28:28 INFO  root:25 - Created connection
+2019-10-09 08:28:29 INFO  root:25 - Created connection
+2019-10-09 08:28:30 INFO  root:25 - Created connection
+2019-10-09 08:28:30 INFO  root:25 - Created connection
+2019-10-09 08:28:31 INFO  root:25 - Created connection
+2019-10-09 08:28:32 INFO  root:25 - Created connection
+2019-10-09 08:28:32 INFO  root:25 - Created connection
+2019-10-09 08:28:33 ERROR root:13 - ERROR: insert or update on table "offer" violates foreign key constraint "offer_offered_car_fkey"
+  Detail: Key (offered_car)=(JHMCM56643C004323) is not present in table "car".
+2019-10-09 08:28:52 INFO  root:25 - Properties file loaded
+2019-10-09 08:28:54 INFO  root:25 - Created connection
+2019-10-09 08:28:54 INFO  root:25 - Car application started
+2019-10-09 08:33:42 INFO  root:25 - Properties file loaded
+2019-10-09 08:33:45 INFO  root:25 - Created connection
+2019-10-09 08:33:45 INFO  root:25 - Car application started
+2019-10-09 08:33:48 INFO  root:25 - Login screen
+2019-10-09 08:33:59 INFO  root:25 - Successfully read user with username emp
+2019-10-09 08:33:59 INFO  root:25 - emp is an Employee
+2019-10-09 08:33:59 INFO  root:25 - Created connection
+2019-10-09 08:34:00 INFO  root:25 - Created connection
+2019-10-09 08:34:01 INFO  root:25 - Created connection
+2019-10-09 08:34:01 INFO  root:25 - Employee emp logged in
+2019-10-09 08:39:42 INFO  root:25 - Viewing all cars in lot
+2019-10-09 08:39:42 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:06:07 INFO  root:25 - Properties file loaded
+2019-10-09 09:06:10 INFO  root:25 - Created connection
+2019-10-09 09:06:10 INFO  root:25 - Car application started
+2019-10-09 09:06:12 INFO  root:25 - Login screen
+2019-10-09 09:06:15 INFO  root:25 - Successfully read user with username emp
+2019-10-09 09:06:15 INFO  root:25 - Incorrect username / password
+2019-10-09 09:06:18 INFO  root:25 - Properties file loaded
+2019-10-09 09:06:21 INFO  root:25 - Created connection
+2019-10-09 09:06:21 INFO  root:25 - Car application started
+2019-10-09 09:06:30 INFO  root:25 - Register screen
+2019-10-09 09:06:33 INFO  root:25 - Properties file loaded
+2019-10-09 09:06:35 INFO  root:25 - Created connection
+2019-10-09 09:06:35 INFO  root:25 - Car application started
+2019-10-09 09:06:36 INFO  root:25 - Register screen
+2019-10-09 09:06:46 INFO  root:25 - Successfully read user with username janeshin
+2019-10-09 09:07:30 INFO  root:25 - Successfully created user with username janeshin with role EMPLOYEE
+2019-10-09 09:08:10 INFO  root:25 - Properties file loaded
+2019-10-09 09:08:12 INFO  root:25 - Created connection
+2019-10-09 09:08:12 INFO  root:25 - Car application started
+2019-10-09 09:08:59 INFO  root:25 - Properties file loaded
+2019-10-09 09:09:01 INFO  root:25 - Created connection
+2019-10-09 09:09:01 INFO  root:25 - Car application started
+2019-10-09 09:09:03 INFO  root:25 - Register screen
+2019-10-09 09:09:11 INFO  root:25 - Successfully read user with username janeshin
+2019-10-09 09:09:15 INFO  root:25 - Successfully created user with username janeshin with role EMPLOYEE
+2019-10-09 09:09:31 INFO  root:25 - Properties file loaded
+2019-10-09 09:09:34 INFO  root:25 - Created connection
+2019-10-09 09:09:34 INFO  root:25 - Car application started
+2019-10-09 09:09:51 INFO  root:25 - Register screen
+2019-10-09 09:10:10 INFO  root:25 - Successfully read user with username ned
+2019-10-09 09:10:15 INFO  root:25 - Successfully created user with username ned with role CUSTOMER
+2019-10-09 09:10:17 INFO  root:25 - Login screen
+2019-10-09 09:10:23 INFO  root:25 - Successfully read user with username janeshin
+2019-10-09 09:10:23 INFO  root:25 - janeshin is an Employee
+2019-10-09 09:10:23 INFO  root:25 - Created connection
+2019-10-09 09:10:24 INFO  root:25 - Created connection
+2019-10-09 09:10:25 INFO  root:25 - Created connection
+2019-10-09 09:10:25 INFO  root:25 - Employee janeshin logged in
+2019-10-09 09:10:37 INFO  root:25 - Viewing all cars in lot
+2019-10-09 09:10:38 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:10:43 INFO  root:25 - Viewing all pending offers
+2019-10-09 09:10:43 INFO  root:25 - Successfully read all pending offers
+2019-10-09 09:10:44 INFO  root:25 - Viewing all payments
+2019-10-09 09:10:44 INFO  root:25 - Successfully read all accepted offers
+2019-10-09 09:10:44 INFO  root:25 - Successfully read all accepted offers
+2019-10-09 09:10:46 INFO  root:25 - Adding a car to lot
+2019-10-09 09:11:44 INFO  root:25 - Successsfully created car 1G2NV52E02M682522
+2019-10-09 09:11:47 INFO  root:25 - Viewing all cars in lot
+2019-10-09 09:11:47 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:12:10 INFO  root:25 - Adding a car to lot
+2019-10-09 09:14:29 INFO  root:25 - Successsfully created car 2T2BK1BA0DC174589
+2019-10-09 09:14:31 INFO  root:25 - Viewing all cars in lot
+2019-10-09 09:14:31 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:14:35 INFO  root:25 - Adding a car to lot
+2019-10-09 09:15:30 INFO  root:25 - Successsfully created car JTEDS42A082031382
+2019-10-09 09:15:31 INFO  root:25 - Viewing all cars in lot
+2019-10-09 09:15:31 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:15:48 INFO  root:25 - Adding a car to lot
+2019-10-09 09:16:23 INFO  root:25 - Successsfully created car 3VWLL7AJ0CM319305
+2019-10-09 09:16:24 INFO  root:25 - Viewing all cars in lot
+2019-10-09 09:16:24 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:16:54 INFO  root:25 - Viewing all pending offers
+2019-10-09 09:16:54 INFO  root:25 - Successfully read all pending offers
+2019-10-09 09:16:55 INFO  root:25 - Viewing all payments
+2019-10-09 09:16:55 INFO  root:25 - Successfully read all accepted offers
+2019-10-09 09:16:56 INFO  root:25 - Successfully read all accepted offers
+2019-10-09 09:17:31 INFO  root:25 - Viewing all cars in lot
+2019-10-09 09:17:32 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:18:02 INFO  root:25 - Login screen
+2019-10-09 09:18:05 INFO  root:25 - Successfully read user with username ned
+2019-10-09 09:18:05 INFO  root:25 - ned is a Customer
+2019-10-09 09:18:06 INFO  root:25 - Created connection
+2019-10-09 09:18:07 INFO  root:25 - Created connection
+2019-10-09 09:18:07 INFO  root:25 - Created connection
+2019-10-09 09:18:07 INFO  root:25 - Customer ned logged in
+2019-10-09 09:18:23 INFO  root:25 - Viewing cars in lot
+2019-10-09 09:18:23 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:19:53 INFO  root:25 - Offering on a car
+2019-10-09 09:20:02 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:20:02 INFO  root:25 - Successfully read offer on car 1G2NV52E02M682522 by user ned
+2019-10-09 09:20:07 INFO  root:25 - Successfully created offer on car 1G2NV52E02M682522 by user ned
+2019-10-09 09:20:08 INFO  root:25 - Viewing cars in lot
+2019-10-09 09:20:08 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:21:59 INFO  root:25 - Viewing cars in lot
+2019-10-09 09:21:59 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:22:04 INFO  root:25 - Offering on a car
+2019-10-09 09:22:07 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:22:07 INFO  root:25 - Successfully read offer on car 1G2NV52E02M682522 by user ned
+2019-10-09 09:24:28 INFO  root:25 - Properties file loaded
+2019-10-09 09:24:31 INFO  root:25 - Created connection
+2019-10-09 09:24:31 INFO  root:25 - Car application started
+2019-10-09 09:24:40 INFO  root:25 - Login screen
+2019-10-09 09:24:44 INFO  root:25 - Successfully read user with username ned
+2019-10-09 09:24:44 INFO  root:25 - ned is a Customer
+2019-10-09 09:24:45 INFO  root:25 - Created connection
+2019-10-09 09:24:46 INFO  root:25 - Created connection
+2019-10-09 09:24:47 INFO  root:25 - Created connection
+2019-10-09 09:24:47 INFO  root:25 - Customer ned logged in
+2019-10-09 09:24:53 INFO  root:25 - Viewing cars that current customer offered on
+2019-10-09 09:24:53 INFO  root:25 - Successfully read all offers
+2019-10-09 09:24:53 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:24:59 INFO  root:25 - Viewing cars in lot
+2019-10-09 09:24:59 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:25:01 INFO  root:25 - Offering on a car
+2019-10-09 09:25:03 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:25:03 INFO  root:25 - Successfully read offer on car 1G2NV52E02M682522 by user ned
+2019-10-09 09:25:10 INFO  root:25 - Updating an offer
+2019-10-09 09:25:13 INFO  root:25 - Successfully updated offer on car 1G2NV52E02M682522 by user ned with value of 45000.0
+2019-10-09 09:25:14 INFO  root:25 - Successfully updated offer on car 1G2NV52E02M682522 by user ned to status PENDING
+2019-10-09 09:25:17 INFO  root:25 - Viewing cars that current customer offered on
+2019-10-09 09:25:17 INFO  root:25 - Successfully read all offers
+2019-10-09 09:25:17 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:26:13 INFO  root:25 - Viewing remaining payments for current customer
+2019-10-09 09:26:13 INFO  root:25 - Successfully read all offers by user ned
+2019-10-09 09:26:16 INFO  root:25 - Login screen
+2019-10-09 09:26:22 INFO  root:25 - Successfully read user with username janeshin
+2019-10-09 09:26:22 INFO  root:25 - janeshin is an Employee
+2019-10-09 09:26:22 INFO  root:25 - Created connection
+2019-10-09 09:26:23 INFO  root:25 - Created connection
+2019-10-09 09:26:24 INFO  root:25 - Created connection
+2019-10-09 09:26:24 INFO  root:25 - Employee janeshin logged in
+2019-10-09 09:26:33 INFO  root:25 - Viewing all cars in lot
+2019-10-09 09:26:33 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:26:36 INFO  root:25 - Viewing all pending offers
+2019-10-09 09:26:36 INFO  root:25 - Successfully read all pending offers
+2019-10-09 09:26:36 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:26:49 INFO  root:25 - Register screen
+2019-10-09 09:27:54 INFO  root:25 - Successfully read user with username kevin
+2019-10-09 09:28:02 INFO  root:25 - Successfully created user with username kevin with role CUSTOMER
+2019-10-09 09:28:04 INFO  root:25 - Login screen
+2019-10-09 09:28:08 INFO  root:25 - Successfully read user with username kevin
+2019-10-09 09:28:08 INFO  root:25 - kevin is a Customer
+2019-10-09 09:28:08 INFO  root:25 - Customer kevin logged in
+2019-10-09 09:28:28 INFO  root:25 - Viewing cars in lot
+2019-10-09 09:28:28 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:28:33 INFO  root:25 - Offering on a car
+2019-10-09 09:28:34 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:28:34 INFO  root:25 - Successfully read offer on car 1G2NV52E02M682522 by user kevin
+2019-10-09 09:28:39 INFO  root:25 - Successfully created offer on car 1G2NV52E02M682522 by user kevin
+2019-10-09 09:28:42 INFO  root:25 - Viewing cars in lot
+2019-10-09 09:28:42 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:28:45 INFO  root:25 - Viewing cars that current customer offered on
+2019-10-09 09:28:45 INFO  root:25 - Successfully read all offers
+2019-10-09 09:28:45 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:28:49 INFO  root:25 - Login screen
+2019-10-09 09:29:11 INFO  root:25 - Successfully read user with username janeshin
+2019-10-09 09:29:11 INFO  root:25 - janeshin is an Employee
+2019-10-09 09:29:11 INFO  root:25 - Employee janeshin logged in
+2019-10-09 09:29:12 INFO  root:25 - Viewing all pending offers
+2019-10-09 09:29:12 INFO  root:25 - Successfully read all pending offers
+2019-10-09 09:29:12 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:29:12 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:30:12 INFO  root:25 - Viewing all pending offers
+2019-10-09 09:30:12 INFO  root:25 - Successfully read all pending offers
+2019-10-09 09:30:12 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:30:12 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:30:14 INFO  root:25 - Viewing all payments
+2019-10-09 09:30:14 INFO  root:25 - Successfully read all accepted offers
+2019-10-09 09:30:14 INFO  root:25 - Successfully read all accepted offers
+2019-10-09 09:30:31 INFO  root:25 - Viewing all pending offers
+2019-10-09 09:30:31 INFO  root:25 - Successfully read all pending offers
+2019-10-09 09:30:32 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:30:32 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:30:35 INFO  root:25 - Accepting an offer
+2019-10-09 09:30:40 INFO  root:25 - Successfully read offer on car 1G2NV52E02M682522 by user kevin
+2019-10-09 09:30:41 INFO  root:25 - Successfully updated offer on car 1G2NV52E02M682522 by user kevin to status ACCEPTED
+2019-10-09 09:30:41 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:30:41 INFO  root:25 - Successfully updated car 1G2NV52E02M682522 to status SOLD
+2019-10-09 09:30:41 INFO  root:25 - Successfully updated car 1G2NV52E02M682522 to owner kevin
+2019-10-09 09:30:41 INFO  root:25 - Successfully read all pending offers
+2019-10-09 09:30:41 INFO  root:25 - Successfully updated offer on car 1G2NV52E02M682522 by user ned to status REJECTED
+2019-10-09 09:30:43 INFO  root:25 - Viewing all pending offers
+2019-10-09 09:30:43 INFO  root:25 - Successfully read all pending offers
+2019-10-09 09:30:45 INFO  root:25 - Viewing all payments
+2019-10-09 09:30:45 INFO  root:25 - Successfully read all accepted offers
+2019-10-09 09:30:45 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:30:45 INFO  root:25 - Successfully read all payments on car 1G2NV52E02M682522 by user kevin
+2019-10-09 09:30:45 INFO  root:25 - Calculating how much customer paid so far
+2019-10-09 09:30:45 INFO  root:25 - Calculating how much more is owed
+2019-10-09 09:30:45 INFO  root:25 - Successfully read all accepted offers
+2019-10-09 09:30:50 INFO  root:25 - Login screen
+2019-10-09 09:31:30 INFO  root:25 - Successfully read user with username ned
+2019-10-09 09:31:30 INFO  root:25 - ned is a Customer
+2019-10-09 09:31:30 INFO  root:25 - Customer ned logged in
+2019-10-09 09:31:32 INFO  root:25 - Viewing cars that current customer offered on
+2019-10-09 09:31:32 INFO  root:25 - Successfully read all offers
+2019-10-09 09:31:32 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:31:39 INFO  root:25 - Login screen
+2019-10-09 09:31:42 INFO  root:25 - Successfully read user with username kevin
+2019-10-09 09:31:42 INFO  root:25 - kevin is a Customer
+2019-10-09 09:31:42 INFO  root:25 - Customer kevin logged in
+2019-10-09 09:31:45 INFO  root:25 - Viewing cars that current customer offered on
+2019-10-09 09:31:45 INFO  root:25 - Successfully read all offers
+2019-10-09 09:31:47 INFO  root:25 - Viewing remaining payments for current customer
+2019-10-09 09:31:47 INFO  root:25 - Successfully read all offers by user kevin
+2019-10-09 09:31:47 INFO  root:25 - Successfully read all payments on car 1G2NV52E02M682522 by user kevin
+2019-10-09 09:31:47 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:31:47 INFO  root:25 - Calculating how much customer paid so far
+2019-10-09 09:31:47 INFO  root:25 - Calculating how much more is owed
+2019-10-09 09:31:47 INFO  root:25 - Calculating monthly payment
+2019-10-09 09:31:50 INFO  root:25 - Making payment
+2019-10-09 09:31:52 INFO  root:25 - Successfully read offer on car 1G2NV52E02M682522 by user kevin
+2019-10-09 09:31:52 INFO  root:25 - Successfully read all payments on car 1G2NV52E02M682522 by user kevin
+2019-10-09 09:31:52 INFO  root:25 - Calculating monthly payment
+2019-10-09 09:31:52 INFO  root:25 - Calculating how much more is owed
+2019-10-09 09:31:52 INFO  root:25 - Calculating how much more is owed
+2019-10-09 09:31:52 INFO  root:25 - Successfully read all payments on car 1G2NV52E02M682522 by user kevin
+2019-10-09 09:31:52 INFO  root:25 - Successfully created payment on car 1G2NV52E02M682522 by user kevin on month 1
+2019-10-09 09:31:52 INFO  root:25 - Successfully read all offers by user kevin
+2019-10-09 09:31:52 INFO  root:25 - Successfully read all payments on car 1G2NV52E02M682522 by user kevin
+2019-10-09 09:31:52 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:31:52 INFO  root:25 - Calculating how much customer paid so far
+2019-10-09 09:31:52 INFO  root:25 - Calculating how much more is owed
+2019-10-09 09:31:52 INFO  root:25 - Calculating monthly payment
+2019-10-09 09:32:54 INFO  root:25 - Viewing cars in lot
+2019-10-09 09:32:54 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:34:00 INFO  root:25 - Login screen
+2019-10-09 09:34:07 INFO  root:25 - Successfully read user with username jane
+2019-10-09 09:34:07 INFO  root:25 - Incorrect username / password
+2019-10-09 09:34:48 INFO  root:25 - Successfully read user with username janeshin
+2019-10-09 09:34:48 INFO  root:25 - janeshin is an Employee
+2019-10-09 09:34:48 INFO  root:25 - Employee janeshin logged in
+2019-10-09 09:34:50 INFO  root:25 - Viewing all cars in lot
+2019-10-09 09:34:50 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:34:54 INFO  root:25 - Viewing all payments
+2019-10-09 09:34:54 INFO  root:25 - Successfully read all accepted offers
+2019-10-09 09:34:54 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:34:54 INFO  root:25 - Successfully read all payments on car 1G2NV52E02M682522 by user kevin
+2019-10-09 09:34:54 INFO  root:25 - Calculating how much customer paid so far
+2019-10-09 09:34:54 INFO  root:25 - Calculating how much more is owed
+2019-10-09 09:34:55 INFO  root:25 - Successfully read all accepted offers
+2019-10-09 09:36:54 INFO  root:25 - Viewing all payments
+2019-10-09 09:36:54 INFO  root:25 - Successfully read all accepted offers
+2019-10-09 09:36:54 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:36:54 INFO  root:25 - Successfully read all payments on car 1G2NV52E02M682522 by user kevin
+2019-10-09 09:36:54 INFO  root:25 - Calculating how much customer paid so far
+2019-10-09 09:36:54 INFO  root:25 - Calculating how much more is owed
+2019-10-09 09:36:54 INFO  root:25 - Successfully read all accepted offers
+2019-10-09 09:39:30 INFO  root:25 - Login screen
+2019-10-09 09:39:33 INFO  root:25 - Successfully read user with username ned
+2019-10-09 09:39:33 INFO  root:25 - ned is a Customer
+2019-10-09 09:39:33 INFO  root:25 - Customer ned logged in
+2019-10-09 09:39:35 INFO  root:25 - Viewing remaining payments for current customer
+2019-10-09 09:39:35 INFO  root:25 - Successfully read all offers by user ned
+2019-10-09 09:39:37 INFO  root:25 - Viewing cars that current customer offered on
+2019-10-09 09:39:37 INFO  root:25 - Successfully read all offers
+2019-10-09 09:39:37 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:39:45 INFO  root:25 - Updating an offer
+2019-10-09 09:39:49 INFO  root:25 - Successfully read offer on car 1G2NV52E02M682522 by user ned
+2019-10-09 09:39:49 INFO  root:25 - Updating an offer
+2019-10-09 09:42:50 INFO  root:25 - Properties file loaded
+2019-10-09 09:42:52 INFO  root:25 - Created connection
+2019-10-09 09:42:52 INFO  root:25 - Car application started
+2019-10-09 09:43:09 INFO  root:25 - Login screen
+2019-10-09 09:43:11 INFO  root:25 - Successfully read user with username ned
+2019-10-09 09:43:11 INFO  root:25 - ned is a Customer
+2019-10-09 09:43:13 INFO  root:25 - Created connection
+2019-10-09 09:43:13 INFO  root:25 - Created connection
+2019-10-09 09:43:14 INFO  root:25 - Created connection
+2019-10-09 09:43:14 INFO  root:25 - Customer ned logged in
+2019-10-09 09:43:31 INFO  root:25 - Viewing cars that current customer offered on
+2019-10-09 09:43:31 INFO  root:25 - Successfully read all offers
+2019-10-09 09:43:31 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:45:26 INFO  root:25 - Updating an offer
+2019-10-09 09:45:32 INFO  root:25 - Successfully read offer on car 1G2NV52E02M682522 by user ned
+2019-10-09 09:45:32 INFO  root:25 - Updating an offer
+2019-10-09 09:45:35 INFO  root:25 - Properties file loaded
+2019-10-09 09:45:37 INFO  root:25 - Created connection
+2019-10-09 09:45:37 INFO  root:25 - Car application started
+2019-10-09 09:45:38 INFO  root:25 - Login screen
+2019-10-09 09:45:41 INFO  root:25 - Successfully read user with username ned
+2019-10-09 09:45:41 INFO  root:25 - ned is a Customer
+2019-10-09 09:45:42 INFO  root:25 - Created connection
+2019-10-09 09:45:42 INFO  root:25 - Created connection
+2019-10-09 09:45:43 INFO  root:25 - Created connection
+2019-10-09 09:45:43 INFO  root:25 - Customer ned logged in
+2019-10-09 09:46:27 INFO  root:25 - Viewing cars in lot
+2019-10-09 09:46:27 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:46:34 INFO  root:25 - Offering on a car
+2019-10-09 09:46:35 INFO  root:25 - Successfully read car JTEDS42A082031382
+2019-10-09 09:46:35 INFO  root:25 - Successfully read offer on car JTEDS42A082031382 by user ned
+2019-10-09 09:46:38 INFO  root:25 - Successfully created offer on car JTEDS42A082031382 by user ned
+2019-10-09 09:46:41 INFO  root:25 - Viewing cars that current customer offered on
+2019-10-09 09:46:41 INFO  root:25 - Successfully read all offers
+2019-10-09 09:46:41 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 09:46:41 INFO  root:25 - Successfully read car JTEDS42A082031382
+2019-10-09 09:46:48 INFO  root:25 - Login screen
+2019-10-09 09:46:51 INFO  root:25 - Successfully read user with username janeshin
+2019-10-09 09:46:51 INFO  root:25 - janeshin is an Employee
+2019-10-09 09:46:52 INFO  root:25 - Created connection
+2019-10-09 09:46:53 INFO  root:25 - Created connection
+2019-10-09 09:46:54 INFO  root:25 - Created connection
+2019-10-09 09:46:54 INFO  root:25 - Employee janeshin logged in
+2019-10-09 09:46:56 INFO  root:25 - Viewing all cars in lot
+2019-10-09 09:46:56 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 09:46:58 INFO  root:25 - Viewing all pending offers
+2019-10-09 09:46:58 INFO  root:25 - Successfully read all pending offers
+2019-10-09 09:46:58 INFO  root:25 - Successfully read car JTEDS42A082031382
+2019-10-09 11:04:21 INFO  root:25 - Properties file loaded
+2019-10-09 11:04:24 INFO  root:25 - Created connection
+2019-10-09 11:04:24 INFO  root:25 - Car application started
+2019-10-09 12:45:08 INFO  root:25 - Properties file loaded
+2019-10-09 12:45:10 INFO  root:25 - Created connection
+2019-10-09 12:45:10 INFO  root:25 - Car application started
+2019-10-09 12:56:26 INFO  root:25 - Login screen
+2019-10-09 12:56:31 INFO  root:25 - Successfully read user with username janeshin
+2019-10-09 12:56:31 INFO  root:25 - janeshin is an Employee
+2019-10-09 12:56:31 INFO  root:25 - Created connection
+2019-10-09 12:56:32 INFO  root:25 - Created connection
+2019-10-09 12:56:33 INFO  root:25 - Created connection
+2019-10-09 12:56:33 INFO  root:25 - Employee janeshin logged in
+2019-10-09 12:56:37 INFO  root:25 - Viewing all pending offers
+2019-10-09 12:56:37 INFO  root:25 - Successfully read all pending offers
+2019-10-09 12:56:37 INFO  root:25 - Successfully read car JTEDS42A082031382
+2019-10-09 12:56:44 INFO  root:25 - Properties file loaded
+2019-10-09 12:56:46 INFO  root:25 - Created connection
+2019-10-09 12:56:46 INFO  root:25 - Car application started
+2019-10-09 13:09:48 INFO  root:25 - Properties file loaded
+2019-10-09 13:09:51 INFO  root:25 - Created connection
+2019-10-09 13:09:51 INFO  root:25 - Car application started
+2019-10-09 13:10:01 INFO  root:25 - Register screen
+2019-10-09 13:10:13 INFO  root:25 - Successfully read user with username roberto
+2019-10-09 13:10:25 INFO  root:25 - Successfully created user with username roberto with role CUSTOMER
+2019-10-09 13:10:28 INFO  root:25 - Login screen
+2019-10-09 13:10:34 INFO  root:25 - Successfully read user with username roberto
+2019-10-09 13:10:34 INFO  root:25 - roberto is a Customer
+2019-10-09 13:10:35 INFO  root:25 - Created connection
+2019-10-09 13:10:36 INFO  root:25 - Created connection
+2019-10-09 13:10:36 INFO  root:25 - Created connection
+2019-10-09 13:10:36 INFO  root:25 - Customer roberto logged in
+2019-10-09 13:10:41 INFO  root:25 - Viewing cars in lot
+2019-10-09 13:10:42 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 13:10:51 INFO  root:25 - Viewing cars that current customer offered on
+2019-10-09 13:10:51 INFO  root:25 - Successfully read all offers
+2019-10-09 13:10:54 INFO  root:25 - Viewing remaining payments for current customer
+2019-10-09 13:10:54 INFO  root:25 - Successfully read all offers by user roberto
+2019-10-09 13:11:00 INFO  root:25 - Viewing cars in lot
+2019-10-09 13:11:00 INFO  root:25 - Successfully read all cars in lot
+2019-10-09 13:11:10 INFO  root:25 - Offering on a car
+2019-10-09 13:11:13 INFO  root:25 - Successfully read car JTEDS42A082031382
+2019-10-09 13:11:14 INFO  root:25 - Successfully read offer on car JTEDS42A082031382 by user roberto
+2019-10-09 13:11:21 INFO  root:25 - Successfully created offer on car JTEDS42A082031382 by user roberto
+2019-10-09 13:11:25 INFO  root:25 - Viewing cars that current customer offered on
+2019-10-09 13:11:25 INFO  root:25 - Successfully read all offers
+2019-10-09 13:11:25 INFO  root:25 - Successfully read car JTEDS42A082031382
+2019-10-09 13:11:37 INFO  root:25 - Login screen
+2019-10-09 13:11:41 INFO  root:25 - Successfully read user with username janeshin
+2019-10-09 13:11:41 INFO  root:25 - janeshin is an Employee
+2019-10-09 13:11:42 INFO  root:25 - Created connection
+2019-10-09 13:11:43 INFO  root:25 - Created connection
+2019-10-09 13:11:44 INFO  root:25 - Created connection
+2019-10-09 13:11:44 INFO  root:25 - Employee janeshin logged in
+2019-10-09 13:11:50 INFO  root:25 - Viewing all pending offers
+2019-10-09 13:11:50 INFO  root:25 - Successfully read all pending offers
+2019-10-09 13:11:50 INFO  root:25 - Successfully read car JTEDS42A082031382
+2019-10-09 13:11:50 INFO  root:25 - Successfully read car JTEDS42A082031382
+2019-10-09 13:12:06 INFO  root:25 - Accepting an offer
+2019-10-09 13:12:13 INFO  root:25 - Successfully read offer on car JTEDS42A082031382 by user ned
+2019-10-09 13:12:13 INFO  root:25 - Successfully updated offer on car JTEDS42A082031382 by user ned to status ACCEPTED
+2019-10-09 13:12:13 INFO  root:25 - Successfully read car JTEDS42A082031382
+2019-10-09 13:12:13 INFO  root:25 - Successfully updated car JTEDS42A082031382 to status SOLD
+2019-10-09 13:12:13 INFO  root:25 - Successfully updated car JTEDS42A082031382 to owner ned
+2019-10-09 13:12:13 INFO  root:25 - Successfully read all pending offers
+2019-10-09 13:12:13 INFO  root:25 - Successfully updated offer on car JTEDS42A082031382 by user roberto to status REJECTED
+2019-10-09 13:12:22 INFO  root:25 - Login screen
+2019-10-09 13:12:29 INFO  root:25 - Successfully read user with username ned
+2019-10-09 13:12:29 INFO  root:25 - ned is a Customer
+2019-10-09 13:12:29 INFO  root:25 - Customer ned logged in
+2019-10-09 13:12:37 INFO  root:25 - Viewing cars that current customer offered on
+2019-10-09 13:12:37 INFO  root:25 - Successfully read all offers
+2019-10-09 13:12:37 INFO  root:25 - Successfully read car 1G2NV52E02M682522
+2019-10-09 13:12:46 INFO  root:25 - Viewing remaining payments for current customer
+2019-10-09 13:12:46 INFO  root:25 - Successfully read all offers by user ned
+2019-10-09 13:12:46 INFO  root:25 - Successfully read all payments on car JTEDS42A082031382 by user ned
+2019-10-09 13:12:46 INFO  root:25 - Successfully read car JTEDS42A082031382
+2019-10-09 13:12:46 INFO  root:25 - Calculating how much customer paid so far
+2019-10-09 13:12:46 INFO  root:25 - Calculating how much more is owed
+2019-10-09 13:12:46 INFO  root:25 - Calculating monthly payment
+2019-10-09 13:12:57 INFO  root:25 - Making payment
+2019-10-09 13:13:00 INFO  root:25 - Successfully read offer on car JTEDS42A082031382 by user ned
+2019-10-09 13:13:00 INFO  root:25 - Successfully read all payments on car JTEDS42A082031382 by user ned
+2019-10-09 13:13:00 INFO  root:25 - Calculating monthly payment
+2019-10-09 13:13:00 INFO  root:25 - Calculating how much more is owed
+2019-10-09 13:13:00 INFO  root:25 - Calculating how much more is owed
+2019-10-09 13:13:00 INFO  root:25 - Successfully read all payments on car JTEDS42A082031382 by user ned
+2019-10-09 13:13:00 INFO  root:25 - Successfully created payment on car JTEDS42A082031382 by user ned on month 1
+2019-10-09 13:13:00 INFO  root:25 - Successfully read all offers by user ned
+2019-10-09 13:13:01 INFO  root:25 - Successfully read all payments on car JTEDS42A082031382 by user ned
+2019-10-09 13:13:01 INFO  root:25 - Successfully read car JTEDS42A082031382
+2019-10-09 13:13:01 INFO  root:25 - Calculating how much customer paid so far
+2019-10-09 13:13:01 INFO  root:25 - Calculating how much more is owed
+2019-10-09 13:13:01 INFO  root:25 - Calculating monthly payment
+2019-10-09 13:13:12 INFO  root:25 - Making payment
+2019-10-09 13:13:13 INFO  root:25 - Successfully read offer on car JTEDS42A082031382 by user ned
+2019-10-09 13:13:13 INFO  root:25 - Successfully read all payments on car JTEDS42A082031382 by user ned
+2019-10-09 13:13:13 INFO  root:25 - Calculating monthly payment
+2019-10-09 13:13:13 INFO  root:25 - Calculating how much more is owed
+2019-10-09 13:13:13 INFO  root:25 - Calculating how much more is owed
+2019-10-09 13:13:14 INFO  root:25 - Successfully read all payments on car JTEDS42A082031382 by user ned
+2019-10-09 13:13:14 INFO  root:25 - Successfully created payment on car JTEDS42A082031382 by user ned on month 2
+2019-10-09 13:13:14 INFO  root:25 - Successfully read all offers by user ned
+2019-10-09 13:13:14 INFO  root:25 - Successfully read all payments on car JTEDS42A082031382 by user ned
+2019-10-09 13:13:14 INFO  root:25 - Successfully read car JTEDS42A082031382
+2019-10-09 13:13:14 INFO  root:25 - Calculating how much customer paid so far
+2019-10-09 13:13:14 INFO  root:25 - Calculating how much more is owed
+2019-10-09 13:13:14 INFO  root:25 - Calculating monthly payment

@@ -125,7 +125,8 @@ public class Driver {
 				else {
 					userDAO.createUser(new User(username, password, firstName, lastName, User.RoleType.CUSTOMER));
 				}
-				System.out.println("Account created successfully!");
+				System.out.println("Account created successfully!\n");
+				break;
 			}
 		}
 	}

@@ -122,8 +122,8 @@ public class CustomerServiceConsoleImpl implements CustomerService {
 				
 				Offer newOffer = offerDAO.readOfferByUsernameAndVin(customer.getUsername(), chosenCar.getVin());
 				
-				if (newOffer != null) {
-					System.out.printf("You've already offered $%.2f\n" + newOffer.getAmount());
+				if (newOffer != null && newOffer.getStatus() != Offer.StatusType.REJECTED) {
+					System.out.printf("You've already offered on this car");
 					System.out.println("\nEnter 1 to update your offer");
 					System.out.println("Enter 2 to offer on a different car");
 					

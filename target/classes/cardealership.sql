@@ -39,3 +39,14 @@ create table payment (
 	foreign key (payer) references c_user (username)
 );
 
+
+-- stored procedure
+create or replace procedure deleteTestUsersAndCars()
+	as $$
+	begin
+		delete from c_user where username like 'test%';
+		delete from car where vin like 'test%';
+	end;
+$$ language plpgsql;
+
+call deleteTestUsersAndCars();
